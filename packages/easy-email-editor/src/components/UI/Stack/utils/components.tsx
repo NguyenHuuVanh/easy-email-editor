@@ -1,4 +1,4 @@
-import React, { Children, isValidElement } from 'react';
+import React, { Children, isValidElement } from "react";
 
 // Wraps `element` in `Component`, if it is not already an instance of
 // `Component`. If `props` is passed, those will be added as props on the
@@ -23,7 +23,7 @@ export function wrapWithComponent<P extends any>(
 // React Hot Loader proxies React components in order to make updates. In
 // production we can simply compare the components for equality.
 const isComponent =
-  process.env.NODE_ENV === 'development'
+  process.env.NODE_ENV === "development"
     ? hotReloadComponentCheck
     : (
         AComponent: React.ComponentType<any>,
@@ -36,7 +36,11 @@ export function isElementOfType<P>(
   element: React.ReactNode | null | undefined,
   Component: React.ComponentType<P> | React.ComponentType<P>[],
 ): boolean {
-  if (element == null || !isValidElement(element) || typeof element.type === 'string') {
+  if (
+    element == null ||
+    !isValidElement(element) ||
+    typeof element.type === "string"
+  ) {
     return false;
   }
 
@@ -48,7 +52,7 @@ export function isElementOfType<P>(
   const Components = Array.isArray(Component) ? Component : [Component];
 
   return Components.some(
-    AComponent => typeof type !== 'string' && isComponent(AComponent, type),
+    (AComponent) => typeof type !== "string" && isComponent(AComponent, type),
   );
 }
 
@@ -59,7 +63,7 @@ export function elementChildren<T extends React.ReactElement>(
   predicate: (element: T) => boolean = () => true,
 ): T[] {
   return Children.toArray(children).filter(
-    child => isValidElement(child) && predicate(child as T),
+    (child) => isValidElement(child) && predicate(child as T),
   ) as T[];
 }
 
@@ -85,7 +89,7 @@ interface ConditionalRenderProps {
 export function ConditionalRender({
   condition,
   children,
-}: ConditionalRenderProps): JSX.Element {
+}: ConditionalRenderProps): JSX.Element | null {
   return condition ? children : null;
 }
 

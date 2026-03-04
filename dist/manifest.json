@@ -1,0 +1,137 @@
+{
+  "index.html": {
+    "file": "assets/index.10c842e9.js",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_easy-email-editor.95cd1d66.js",
+      "_lodash.dd2a0080.js",
+      "_mjml-browser.3d8d9423.js"
+    ],
+    "dynamicImports": [
+      "_mjml-browser.3d8d9423.js",
+      "node_modules/html2canvas/dist/html2canvas.esm.js",
+      "src/templates/Arturia - Newsletter.json",
+      "src/templates/DynamicData.json",
+      "src/templates/Food.json",
+      "src/templates/MJML Code - Newsletter.json",
+      "src/templates/Racoon - Ecommerce.json",
+      "src/templates/Real Estate.json",
+      "src/templates/Shop - Newsletter.json",
+      "src/templates/Sphero - Newsletter.json",
+      "src/templates/Star Wars.json",
+      "src/templates/Stay Updated On Our Shopping.json",
+      "src/templates/We Serve Healthy & Delicious Foods.json",
+      "src/templates/St. Patrick Day - Newsletter.json",
+      "src/pages/Editor/index.tsx"
+    ],
+    "css": [
+      "assets/index.568d532a.css"
+    ]
+  },
+  "_easy-email-editor.95cd1d66.js": {
+    "file": "assets/easy-email-editor.95cd1d66.js",
+    "imports": [
+      "_lodash.dd2a0080.js",
+      "_mjml-browser.3d8d9423.js"
+    ],
+    "css": [
+      "assets/easy-email-editor.31be58bf.css"
+    ],
+    "assets": [
+      "assets/iphone.339c33c4.png",
+      "assets/iconfont.43fb6ea1.woff2",
+      "assets/iconfont.e849d9a9.woff",
+      "assets/iconfont.0c276e82.ttf"
+    ]
+  },
+  "node_modules/html2canvas/dist/html2canvas.esm.js": {
+    "file": "assets/html2canvas.4d0ab5af.js",
+    "src": "node_modules/html2canvas/dist/html2canvas.esm.js",
+    "isDynamicEntry": true
+  },
+  "_lodash.dd2a0080.js": {
+    "file": "assets/lodash.dd2a0080.js",
+    "imports": [
+      "_easy-email-editor.95cd1d66.js"
+    ]
+  },
+  "_mjml-browser.3d8d9423.js": {
+    "file": "assets/mjml-browser.3d8d9423.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_easy-email-editor.95cd1d66.js"
+    ]
+  },
+  "src/pages/Editor/index.tsx": {
+    "file": "assets/index.8ae8ff8b.js",
+    "src": "src/pages/Editor/index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_easy-email-editor.95cd1d66.js",
+      "index.html",
+      "_lodash.dd2a0080.js",
+      "_mjml-browser.3d8d9423.js"
+    ]
+  },
+  "src/templates/Arturia - Newsletter.json": {
+    "file": "assets/Arturia - Newsletter.46713491.js",
+    "src": "src/templates/Arturia - Newsletter.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/DynamicData.json": {
+    "file": "assets/DynamicData.1afa1d20.js",
+    "src": "src/templates/DynamicData.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/Food.json": {
+    "file": "assets/Food.df4d6de5.js",
+    "src": "src/templates/Food.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/MJML Code - Newsletter.json": {
+    "file": "assets/MJML Code - Newsletter.0ccc2e59.js",
+    "src": "src/templates/MJML Code - Newsletter.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/Racoon - Ecommerce.json": {
+    "file": "assets/Racoon - Ecommerce.0c4e1670.js",
+    "src": "src/templates/Racoon - Ecommerce.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/Real Estate.json": {
+    "file": "assets/Real Estate.c60d9de7.js",
+    "src": "src/templates/Real Estate.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/Shop - Newsletter.json": {
+    "file": "assets/Shop - Newsletter.dabe52c7.js",
+    "src": "src/templates/Shop - Newsletter.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/Sphero - Newsletter.json": {
+    "file": "assets/Sphero - Newsletter.b3fe5c8d.js",
+    "src": "src/templates/Sphero - Newsletter.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/Star Wars.json": {
+    "file": "assets/Star Wars.52627929.js",
+    "src": "src/templates/Star Wars.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/Stay Updated On Our Shopping.json": {
+    "file": "assets/Stay Updated On Our Shopping.27bac42d.js",
+    "src": "src/templates/Stay Updated On Our Shopping.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/We Serve Healthy & Delicious Foods.json": {
+    "file": "assets/We Serve Healthy _ Delicious Foods.689f6340.js",
+    "src": "src/templates/We Serve Healthy & Delicious Foods.json",
+    "isDynamicEntry": true
+  },
+  "src/templates/St. Patrick Day - Newsletter.json": {
+    "file": "assets/St. Patrick Day - Newsletter.a78c3d71.js",
+    "src": "src/templates/St. Patrick Day - Newsletter.json",
+    "isDynamicEntry": true
+  }
+}
