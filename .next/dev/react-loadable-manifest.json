@@ -1,0 +1,105 @@
+{
+  "..\\node_modules\\easy-email-extensions\\lib\\index2.js -> ./index3.js": {
+    "id": "..\\node_modules\\easy-email-extensions\\lib\\index2.js -> ./index3.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_easy-email-extensions_lib_index3_js.js"
+    ]
+  },
+  "..\\node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\web-socket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts": {
+    "id": "..\\node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\web-socket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js"
+    ]
+  },
+  "app\\editor\\page.tsx -> @demo/views/Editor": {
+    "id": "app\\editor\\page.tsx -> @demo/views/Editor",
+    "files": [
+      "static/css/_app-pages-browser_src_views_Editor_index_tsx.css",
+      "static/chunks/_app-pages-browser_src_views_Editor_index_tsx.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/Arturia - Newsletter.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/Arturia - Newsletter.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_Arturia_-_Newsletter_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/DynamicData.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/DynamicData.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_DynamicData_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/Food.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/Food.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_Food_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/MJML Code - Newsletter.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/MJML Code - Newsletter.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_MJML_Code_-_Newsletter_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/Racoon - Ecommerce.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/Racoon - Ecommerce.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_Racoon_-_Ecommerce_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/Real Estate.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/Real Estate.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_Real_Estate_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/Shop - Newsletter.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/Shop - Newsletter.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_Shop_-_Newsletter_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/Sphero - Newsletter.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/Sphero - Newsletter.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_Sphero_-_Newsletter_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/St. Patrick Day - Newsletter.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/St. Patrick Day - Newsletter.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_St_Patrick_Day_-_Newsletter_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/Star Wars.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/Star Wars.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_Star_Wars_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/Stay Updated On Our Shopping.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/Stay Updated On Our Shopping.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_Stay_Updated_On_Our_Shopping_json.js"
+    ]
+  },
+  "config\\getTemplate.ts -> @demo/templates/We Serve Healthy & Delicious Foods.json": {
+    "id": "config\\getTemplate.ts -> @demo/templates/We Serve Healthy & Delicious Foods.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_templates_We_Serve_Healthy_Delicious_Foods_json.js"
+    ]
+  },
+  "utils\\emailToImage.ts -> html2canvas": {
+    "id": "utils\\emailToImage.ts -> html2canvas",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_html2canvas_dist_html2canvas_js.js"
+    ]
+  },
+  "utils\\emailToImage.ts -> mjml-browser": {
+    "id": "utils\\emailToImage.ts -> mjml-browser",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_mjml-browser_lib_index_js.js"
+    ]
+  }
+}

@@ -1,8 +1,8 @@
-import { classnames } from '@/utils/classnames';
-import React, { useEffect, useState, useCallback } from 'react';
-import { Button } from '../Button';
-import { Stack } from '../Stack';
-import './index.scss';
+import { classnames } from "@/utils/classnames";
+import React, { useEffect, useState, useCallback } from "react";
+import { Button } from "../Button";
+import { Stack } from "../Stack";
+import "./index.scss";
 
 export interface TabsProps {
   children?: React.ReactNode;
@@ -22,8 +22,10 @@ export interface TabPaneProps {
   className?: string;
 }
 
-const Tabs: React.FC<TabsProps> = props => {
-  const [activeTab, setActiveTab] = useState<string>(props.defaultActiveTab || '');
+const Tabs: React.FC<TabsProps> = (props) => {
+  const [activeTab, setActiveTab] = useState<string>(
+    props.defaultActiveTab || "",
+  );
 
   const onClick = useCallback(
     (nextTab: string) => {
@@ -49,16 +51,10 @@ const Tabs: React.FC<TabsProps> = props => {
   }, [props.activeTab]);
 
   return (
-    <div
-      style={props.style}
-      className={props.className}
-    >
-      <div className='easy-email-editor-tabWrapper'>
-        <Stack
-          distribution='equalSpacing'
-          alignment='center'
-        >
-          <Stack alignment='center'>
+    <div style={props.style} className={props.className}>
+      <div className="easy-email-editor-tabWrapper">
+        <Stack distribution="equalSpacing" alignment="center">
+          <Stack alignment="center">
             {React.Children.map(
               props.children as any,
               (item: { props: { tab: TabPaneProps }; key: string }, index) => {
@@ -67,13 +63,16 @@ const Tabs: React.FC<TabsProps> = props => {
                     key={item.key}
                     onClick={() => onClick(item.key)}
                     className={classnames(
-                      'easy-email-editor-tabItem',
-                      !activeTab && index === 0 && 'easy-email-editor-tabActiveItem',
-                      activeTab === item.key && 'easy-email-editor-tabActiveItem',
+                      "easy-email-editor-tabItem",
+                      !activeTab &&
+                        index === 0 &&
+                        "easy-email-editor-tabActiveItem",
+                      activeTab === item.key &&
+                        "easy-email-editor-tabActiveItem",
                     )}
                   >
                     <Button noBorder>
-                      <>{item.props.tab}</>
+                      <>{item.props.tab as any}</>
                     </Button>
                   </div>
                 );
@@ -90,11 +89,11 @@ const Tabs: React.FC<TabsProps> = props => {
           return (
             <div
               style={{
-                display: visible ? undefined : 'none',
-                height: 'calc(100% - 50px)',
+                display: visible ? undefined : "none",
+                height: "calc(100% - 50px)",
               }}
             >
-              <>{item}</>
+              <>{item as any}</>
             </div>
           );
         },
@@ -103,7 +102,7 @@ const Tabs: React.FC<TabsProps> = props => {
   );
 };
 
-const TabPane: React.FC<TabPaneProps> = props => {
+const TabPane: React.FC<TabPaneProps> = (props) => {
   return <>{props.children}</>;
 };
 

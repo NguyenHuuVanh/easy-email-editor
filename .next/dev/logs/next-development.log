@@ -1,0 +1,1458 @@
+[00:00:02.813] Server  LOG     ✓ Ready in 2.2s
+[00:00:13.671] Server  LOG     ○ Compiling / ...
+[00:00:25.012] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <div id="easy-email..." style={{display:"flex", ...}}>
+      <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+        <div style={{height:"100%", ...}} className={undefined}>
+          <div>
+          <div>
+          <div style={{display:"none", ...}}>
+            <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+              <DesktopEmailPreview>
+                <div style={{height:"100%"}}>
+                  <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                    <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                      <style>
+                      <div className="preview-co..." style={{height:"100%", ...}}>
+                        <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+>                         <head data-selector="0-0" style={undefined}>
+>                           {"\n    "}
+                            ...
+                          ...
+                      ...
+          ...
+      ...
+
+[00:00:25.012] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s html 
+
+  ...
+    <section ref={null} style={{height:"ca..."}} className="arco-layout">
+      <EmailEditor>
+        <div id="easy-email..." style={{display:"flex", ...}}>
+          <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+            <div style={{height:"100%", ...}} className={undefined}>
+              <div>
+              <div>
+              <div style={{display:"none", ...}}>
+                <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                  <DesktopEmailPreview>
+                    <div style={{height:"100%"}}>
+                      <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                        <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                          <style>
+                          <div className="preview-co..." style={{height:"100%", ...}}>
+>                           <html
+>                             data-selector="0"
+>                             lang="und"
+>                             dir="auto"
+>                             xmlns="http://www.w3.org/1999/xhtml"
+>                             xmlns:v="urn:schemas-microsoft-com:vml"
+>                             xmlns:o="urn:schemas-microsoft-com:office:office"
+>                             style={undefined}
+>                           >
+                              <head>
+>                             {"\n  "}
+                              ...
+                          ...
+              ...
+          ...
+
+[00:00:25.012] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s table 
+
+  ...
+    <DesktopEmailPreview>
+      <div style={{height:"100%"}}>
+        <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+          <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+            <style>
+            <div className="preview-co..." style={{height:"100%", ...}}>
+              <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+                <head>
+                <body data-selector="0-2" style={{...}}>
+                  <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" ...>
+                    <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+>                     <table
+>                       data-selector="0-2-1-3-1"
+>                       align="center"
+>                       border="0"
+>                       cellpadding="0"
+>                       cellspacing="0"
+>                       role="presentation"
+>                       style={{width:"100%"}}
+>                     >
+>                       {"\n          "}
+                        ...
+                      ...
+                    ...
+                  ...
+            ...
+
+[00:00:25.012] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+      <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+        <style>
+        <div className="preview-co..." style={{height:"100%", ...}}>
+          <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+            <head>
+            <body data-selector="0-2" style={{...}}>
+              <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+                <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+                  <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+>                   <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                     {"\n            "}
+                      ...
+                    ...
+                  ...
+                ...
+              ...
+        ...
+
+[00:00:25.012] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tr 
+
+  ...
+    <style>
+    <div className="preview-co..." style={{height:"100%", ...}}>
+      <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." xmlns:o="urn:schema..." ...>
+        <head>
+        <body data-selector="0-2" style={{...}}>
+          <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+            <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+              <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+                <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                 <tr data-selector="0-2-1-3-1-1-1" style={undefined}>
+>                   {"\n              "}
+                    ...
+                  ...
+                ...
+              ...
+            ...
+          ...
+    ...
+
+[00:00:25.012] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> div  
+
+  ...
+    <section ref={null} style={{display:"flex", ...}} className="arco-layou...">
+      <Sider>
+      <Layout style={{height:"ca..."}}>
+        <section ref={null} style={{height:"ca..."}} className="arco-layout">
+          <EmailEditor>
+            <div id="easy-email..." style={{display:"flex", ...}}>
+              <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+                <div style={{height:"100%", ...}} className={undefined}>
+                  <div>
+                  <div>
+                  <div style={{display:"none", ...}}>
+                    <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                      <DesktopEmailPreview>
+                        <div style={{height:"100%"}}>
+                          <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                            <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                              <style>
+>                             <div
+>                               className="preview-container easy-email-sync-scroll"
+>                               style={{height:"100%",overflow:"auto",margin:"auto",paddingLeft:10,paddingRight:10,paddingTop:40,paddingBottom:140, ...}}
+>                             >
+>                               <html
+>                                 data-selector="0"
+>                                 lang="und"
+>                                 dir="auto"
+>                                 xmlns="http://www.w3.org/1999/xhtml"
+>                                 xmlns:v="urn:schemas-microsoft-com:vml"
+>                                 xmlns:o="urn:schemas-microsoft-com:office:office"
+>                                 style={undefined}
+>                               >
+                              ...
+                  ...
+              ...
+      ...
+
+[00:00:25.012] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. div <html>
+[00:00:25.012] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:00:25.012] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:00:25.012] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:00:25.012] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:00:25.012] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:00:25.012] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:00:25.012] Browser ERROR   uncaughtError: Error: Target container is not a DOM element.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:00:25.012] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:19.854] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:05:41.601] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <div id="easy-email..." style={{display:"flex", ...}}>
+      <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+        <div style={{height:"100%", ...}} className={undefined}>
+          <div>
+          <div>
+          <div style={{display:"none", ...}}>
+            <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+              <DesktopEmailPreview>
+                <div style={{height:"100%"}}>
+                  <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                    <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                      <style>
+                      <div className="preview-co..." style={{height:"100%", ...}}>
+                        <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+>                         <head data-selector="0-0" style={undefined}>
+>                           {"\n    "}
+                            ...
+                          ...
+                      ...
+          ...
+      ...
+
+[00:05:41.601] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s html 
+
+  ...
+    <section ref={null} style={{height:"ca..."}} className="arco-layout">
+      <EmailEditor>
+        <div id="easy-email..." style={{display:"flex", ...}}>
+          <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+            <div style={{height:"100%", ...}} className={undefined}>
+              <div>
+              <div>
+              <div style={{display:"none", ...}}>
+                <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                  <DesktopEmailPreview>
+                    <div style={{height:"100%"}}>
+                      <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                        <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                          <style>
+                          <div className="preview-co..." style={{height:"100%", ...}}>
+>                           <html
+>                             data-selector="0"
+>                             lang="und"
+>                             dir="auto"
+>                             xmlns="http://www.w3.org/1999/xhtml"
+>                             xmlns:v="urn:schemas-microsoft-com:vml"
+>                             xmlns:o="urn:schemas-microsoft-com:office:office"
+>                             style={undefined}
+>                           >
+                              <head>
+>                             {"\n  "}
+                              ...
+                          ...
+              ...
+          ...
+
+[00:05:41.601] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s table 
+
+  ...
+    <DesktopEmailPreview>
+      <div style={{height:"100%"}}>
+        <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+          <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+            <style>
+            <div className="preview-co..." style={{height:"100%", ...}}>
+              <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+                <head>
+                <body data-selector="0-2" style={{...}}>
+                  <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" ...>
+                    <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+>                     <table
+>                       data-selector="0-2-1-3-1"
+>                       align="center"
+>                       border="0"
+>                       cellpadding="0"
+>                       cellspacing="0"
+>                       role="presentation"
+>                       style={{width:"100%"}}
+>                     >
+>                       {"\n          "}
+                        ...
+                      ...
+                    ...
+                  ...
+            ...
+
+[00:05:41.601] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+      <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+        <style>
+        <div className="preview-co..." style={{height:"100%", ...}}>
+          <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+            <head>
+            <body data-selector="0-2" style={{...}}>
+              <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+                <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+                  <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+>                   <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                     {"\n            "}
+                      ...
+                    ...
+                  ...
+                ...
+              ...
+        ...
+
+[00:05:41.601] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tr 
+
+  ...
+    <style>
+    <div className="preview-co..." style={{height:"100%", ...}}>
+      <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." xmlns:o="urn:schema..." ...>
+        <head>
+        <body data-selector="0-2" style={{...}}>
+          <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+            <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+              <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+                <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                 <tr data-selector="0-2-1-3-1-1-1" style={undefined}>
+>                   {"\n              "}
+                    ...
+                  ...
+                ...
+              ...
+            ...
+          ...
+    ...
+
+[00:05:41.601] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> div  
+
+  ...
+    <section ref={null} style={{display:"flex", ...}} className="arco-layou...">
+      <Sider>
+      <Layout style={{height:"ca..."}}>
+        <section ref={null} style={{height:"ca..."}} className="arco-layout">
+          <EmailEditor>
+            <div id="easy-email..." style={{display:"flex", ...}}>
+              <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+                <div style={{height:"100%", ...}} className={undefined}>
+                  <div>
+                  <div>
+                  <div style={{display:"none", ...}}>
+                    <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                      <DesktopEmailPreview>
+                        <div style={{height:"100%"}}>
+                          <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                            <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                              <style>
+>                             <div
+>                               className="preview-container easy-email-sync-scroll"
+>                               style={{height:"100%",overflow:"auto",margin:"auto",paddingLeft:10,paddingRight:10,paddingTop:40,paddingBottom:140, ...}}
+>                             >
+>                               <html
+>                                 data-selector="0"
+>                                 lang="und"
+>                                 dir="auto"
+>                                 xmlns="http://www.w3.org/1999/xhtml"
+>                                 xmlns:v="urn:schemas-microsoft-com:vml"
+>                                 xmlns:o="urn:schemas-microsoft-com:office:office"
+>                                 style={undefined}
+>                               >
+                              ...
+                  ...
+              ...
+      ...
+
+[00:05:41.601] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. div <html>
+[00:05:41.601] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:05:41.601] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:05:41.601] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:05:41.601] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:05:41.601] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:05:41.601] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:05:41.601] Browser ERROR   uncaughtError: Error: Target container is not a DOM element.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:05:41.601] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <div id="easy-email..." style={{display:"flex", ...}}>
+      <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+        <div style={{height:"100%", ...}} className={undefined}>
+          <div>
+          <div>
+          <div style={{display:"none", ...}}>
+            <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+              <DesktopEmailPreview>
+                <div style={{height:"100%"}}>
+                  <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                    <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                      <style>
+                      <div className="preview-co..." style={{height:"100%", ...}}>
+                        <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+>                         <head data-selector="0-0" style={undefined}>
+>                           {"\n    "}
+                            ...
+                          ...
+                      ...
+          ...
+      ...
+
+[00:08:03.645] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s html 
+
+  ...
+    <section ref={null} style={{height:"ca..."}} className="arco-layout">
+      <EmailEditor>
+        <div id="easy-email..." style={{display:"flex", ...}}>
+          <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+            <div style={{height:"100%", ...}} className={undefined}>
+              <div>
+              <div>
+              <div style={{display:"none", ...}}>
+                <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                  <DesktopEmailPreview>
+                    <div style={{height:"100%"}}>
+                      <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                        <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                          <style>
+                          <div className="preview-co..." style={{height:"100%", ...}}>
+>                           <html
+>                             data-selector="0"
+>                             lang="und"
+>                             dir="auto"
+>                             xmlns="http://www.w3.org/1999/xhtml"
+>                             xmlns:v="urn:schemas-microsoft-com:vml"
+>                             xmlns:o="urn:schemas-microsoft-com:office:office"
+>                             style={undefined}
+>                           >
+                              <head>
+>                             {"\n  "}
+                              ...
+                          ...
+              ...
+          ...
+
+[00:08:03.645] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s table 
+
+  ...
+    <DesktopEmailPreview>
+      <div style={{height:"100%"}}>
+        <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+          <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+            <style>
+            <div className="preview-co..." style={{height:"100%", ...}}>
+              <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+                <head>
+                <body data-selector="0-2" style={{...}}>
+                  <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" ...>
+                    <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+>                     <table
+>                       data-selector="0-2-1-3-1"
+>                       align="center"
+>                       border="0"
+>                       cellpadding="0"
+>                       cellspacing="0"
+>                       role="presentation"
+>                       style={{width:"100%"}}
+>                     >
+>                       {"\n          "}
+                        ...
+                      ...
+                    ...
+                  ...
+            ...
+
+[00:08:03.645] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+      <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+        <style>
+        <div className="preview-co..." style={{height:"100%", ...}}>
+          <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+            <head>
+            <body data-selector="0-2" style={{...}}>
+              <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+                <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+                  <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+>                   <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                     {"\n            "}
+                      ...
+                    ...
+                  ...
+                ...
+              ...
+        ...
+
+[00:08:03.645] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tr 
+
+  ...
+    <style>
+    <div className="preview-co..." style={{height:"100%", ...}}>
+      <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." xmlns:o="urn:schema..." ...>
+        <head>
+        <body data-selector="0-2" style={{...}}>
+          <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+            <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+              <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+                <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                 <tr data-selector="0-2-1-3-1-1-1" style={undefined}>
+>                   {"\n              "}
+                    ...
+                  ...
+                ...
+              ...
+            ...
+          ...
+    ...
+
+[00:08:03.645] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> div  
+
+  ...
+    <section ref={null} style={{display:"flex", ...}} className="arco-layou...">
+      <Sider>
+      <Layout style={{height:"ca..."}}>
+        <section ref={null} style={{height:"ca..."}} className="arco-layout">
+          <EmailEditor>
+            <div id="easy-email..." style={{display:"flex", ...}}>
+              <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+                <div style={{height:"100%", ...}} className={undefined}>
+                  <div>
+                  <div>
+                  <div style={{display:"none", ...}}>
+                    <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                      <DesktopEmailPreview>
+                        <div style={{height:"100%"}}>
+                          <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                            <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                              <style>
+>                             <div
+>                               className="preview-container easy-email-sync-scroll"
+>                               style={{height:"100%",overflow:"auto",margin:"auto",paddingLeft:10,paddingRight:10,paddingTop:40,paddingBottom:140, ...}}
+>                             >
+>                               <html
+>                                 data-selector="0"
+>                                 lang="und"
+>                                 dir="auto"
+>                                 xmlns="http://www.w3.org/1999/xhtml"
+>                                 xmlns:v="urn:schemas-microsoft-com:vml"
+>                                 xmlns:o="urn:schemas-microsoft-com:office:office"
+>                                 style={undefined}
+>                               >
+                              ...
+                  ...
+              ...
+      ...
+
+[00:08:03.645] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. div <html>
+[00:08:03.645] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:08:03.645] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:08:03.645] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:08:03.645] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:08:03.645] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:08:03.645] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:08:03.645] Browser ERROR   uncaughtError: Error: Target container is not a DOM element.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:08:03.645] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:11.101] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:10:16.897] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <div id="easy-email..." style={{display:"flex", ...}}>
+      <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+        <div style={{height:"100%", ...}} className={undefined}>
+          <div>
+          <div>
+          <div style={{display:"none", ...}}>
+            <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+              <DesktopEmailPreview>
+                <div style={{height:"100%"}}>
+                  <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                    <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                      <style>
+                      <div className="preview-co..." style={{height:"100%", ...}}>
+                        <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+>                         <head data-selector="0-0" style={undefined}>
+>                           {"\n    "}
+                            ...
+                          ...
+                      ...
+          ...
+      ...
+
+[00:10:16.897] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s html 
+
+  ...
+    <section ref={null} style={{height:"ca..."}} className="arco-layout">
+      <EmailEditor>
+        <div id="easy-email..." style={{display:"flex", ...}}>
+          <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+            <div style={{height:"100%", ...}} className={undefined}>
+              <div>
+              <div>
+              <div style={{display:"none", ...}}>
+                <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                  <DesktopEmailPreview>
+                    <div style={{height:"100%"}}>
+                      <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                        <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                          <style>
+                          <div className="preview-co..." style={{height:"100%", ...}}>
+>                           <html
+>                             data-selector="0"
+>                             lang="und"
+>                             dir="auto"
+>                             xmlns="http://www.w3.org/1999/xhtml"
+>                             xmlns:v="urn:schemas-microsoft-com:vml"
+>                             xmlns:o="urn:schemas-microsoft-com:office:office"
+>                             style={undefined}
+>                           >
+                              <head>
+>                             {"\n  "}
+                              ...
+                          ...
+              ...
+          ...
+
+[00:10:16.897] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s table 
+
+  ...
+    <DesktopEmailPreview>
+      <div style={{height:"100%"}}>
+        <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+          <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+            <style>
+            <div className="preview-co..." style={{height:"100%", ...}}>
+              <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+                <head>
+                <body data-selector="0-2" style={{...}}>
+                  <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" ...>
+                    <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+>                     <table
+>                       data-selector="0-2-1-3-1"
+>                       align="center"
+>                       border="0"
+>                       cellpadding="0"
+>                       cellspacing="0"
+>                       role="presentation"
+>                       style={{width:"100%"}}
+>                     >
+>                       {"\n          "}
+                        ...
+                      ...
+                    ...
+                  ...
+            ...
+
+[00:10:16.897] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+      <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+        <style>
+        <div className="preview-co..." style={{height:"100%", ...}}>
+          <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+            <head>
+            <body data-selector="0-2" style={{...}}>
+              <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+                <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+                  <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+>                   <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                     {"\n            "}
+                      ...
+                    ...
+                  ...
+                ...
+              ...
+        ...
+
+[00:10:16.897] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tr 
+
+  ...
+    <style>
+    <div className="preview-co..." style={{height:"100%", ...}}>
+      <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." xmlns:o="urn:schema..." ...>
+        <head>
+        <body data-selector="0-2" style={{...}}>
+          <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+            <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+              <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+                <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                 <tr data-selector="0-2-1-3-1-1-1" style={undefined}>
+>                   {"\n              "}
+                    ...
+                  ...
+                ...
+              ...
+            ...
+          ...
+    ...
+
+[00:10:16.897] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> div  
+
+  ...
+    <section ref={null} style={{display:"flex", ...}} className="arco-layou...">
+      <Sider>
+      <Layout style={{height:"ca..."}}>
+        <section ref={null} style={{height:"ca..."}} className="arco-layout">
+          <EmailEditor>
+            <div id="easy-email..." style={{display:"flex", ...}}>
+              <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+                <div style={{height:"100%", ...}} className={undefined}>
+                  <div>
+                  <div>
+                  <div style={{display:"none", ...}}>
+                    <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                      <DesktopEmailPreview>
+                        <div style={{height:"100%"}}>
+                          <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                            <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                              <style>
+>                             <div
+>                               className="preview-container easy-email-sync-scroll"
+>                               style={{height:"100%",overflow:"auto",margin:"auto",paddingLeft:10,paddingRight:10,paddingTop:40,paddingBottom:140, ...}}
+>                             >
+>                               <html
+>                                 data-selector="0"
+>                                 lang="und"
+>                                 dir="auto"
+>                                 xmlns="http://www.w3.org/1999/xhtml"
+>                                 xmlns:v="urn:schemas-microsoft-com:vml"
+>                                 xmlns:o="urn:schemas-microsoft-com:office:office"
+>                                 style={undefined}
+>                               >
+                              ...
+                  ...
+              ...
+      ...
+
+[00:10:16.897] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. div <html>
+[00:10:16.897] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:10:16.897] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:10:16.897] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:10:16.897] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:10:16.897] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:10:16.897] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:10:16.897] Browser ERROR   uncaughtError: Error: Target container is not a DOM element.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:10:16.897] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <div id="easy-email..." style={{display:"flex", ...}}>
+      <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+        <div style={{height:"100%", ...}} className={undefined}>
+          <div>
+          <div>
+          <div style={{display:"none", ...}}>
+            <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+              <DesktopEmailPreview>
+                <div style={{height:"100%"}}>
+                  <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                    <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                      <style>
+                      <div className="preview-co..." style={{height:"100%", ...}}>
+                        <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+>                         <head data-selector="0-0" style={undefined}>
+>                           {"\n    "}
+                            ...
+                          ...
+                      ...
+          ...
+      ...
+
+[00:12:13.890] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s html 
+
+  ...
+    <section ref={null} style={{height:"ca..."}} className="arco-layout">
+      <EmailEditor>
+        <div id="easy-email..." style={{display:"flex", ...}}>
+          <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+            <div style={{height:"100%", ...}} className={undefined}>
+              <div>
+              <div>
+              <div style={{display:"none", ...}}>
+                <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                  <DesktopEmailPreview>
+                    <div style={{height:"100%"}}>
+                      <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                        <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                          <style>
+                          <div className="preview-co..." style={{height:"100%", ...}}>
+>                           <html
+>                             data-selector="0"
+>                             lang="und"
+>                             dir="auto"
+>                             xmlns="http://www.w3.org/1999/xhtml"
+>                             xmlns:v="urn:schemas-microsoft-com:vml"
+>                             xmlns:o="urn:schemas-microsoft-com:office:office"
+>                             style={undefined}
+>                           >
+                              <head>
+>                             {"\n  "}
+                              ...
+                          ...
+              ...
+          ...
+
+[00:12:13.890] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s table 
+
+  ...
+    <DesktopEmailPreview>
+      <div style={{height:"100%"}}>
+        <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+          <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+            <style>
+            <div className="preview-co..." style={{height:"100%", ...}}>
+              <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+                <head>
+                <body data-selector="0-2" style={{...}}>
+                  <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" ...>
+                    <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+>                     <table
+>                       data-selector="0-2-1-3-1"
+>                       align="center"
+>                       border="0"
+>                       cellpadding="0"
+>                       cellspacing="0"
+>                       role="presentation"
+>                       style={{width:"100%"}}
+>                     >
+>                       {"\n          "}
+                        ...
+                      ...
+                    ...
+                  ...
+            ...
+
+[00:12:13.890] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+      <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+        <style>
+        <div className="preview-co..." style={{height:"100%", ...}}>
+          <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+            <head>
+            <body data-selector="0-2" style={{...}}>
+              <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+                <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+                  <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+>                   <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                     {"\n            "}
+                      ...
+                    ...
+                  ...
+                ...
+              ...
+        ...
+
+[00:12:13.890] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tr 
+
+  ...
+    <style>
+    <div className="preview-co..." style={{height:"100%", ...}}>
+      <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." xmlns:o="urn:schema..." ...>
+        <head>
+        <body data-selector="0-2" style={{...}}>
+          <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+            <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+              <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+                <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                 <tr data-selector="0-2-1-3-1-1-1" style={undefined}>
+>                   {"\n              "}
+                    ...
+                  ...
+                ...
+              ...
+            ...
+          ...
+    ...
+
+[00:12:13.890] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> div  
+
+  ...
+    <section ref={null} style={{display:"flex", ...}} className="arco-layou...">
+      <Sider>
+      <Layout style={{height:"ca..."}}>
+        <section ref={null} style={{height:"ca..."}} className="arco-layout">
+          <EmailEditor>
+            <div id="easy-email..." style={{display:"flex", ...}}>
+              <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+                <div style={{height:"100%", ...}} className={undefined}>
+                  <div>
+                  <div>
+                  <div style={{display:"none", ...}}>
+                    <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                      <DesktopEmailPreview>
+                        <div style={{height:"100%"}}>
+                          <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                            <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                              <style>
+>                             <div
+>                               className="preview-container easy-email-sync-scroll"
+>                               style={{height:"100%",overflow:"auto",margin:"auto",paddingLeft:10,paddingRight:10,paddingTop:40,paddingBottom:140, ...}}
+>                             >
+>                               <html
+>                                 data-selector="0"
+>                                 lang="und"
+>                                 dir="auto"
+>                                 xmlns="http://www.w3.org/1999/xhtml"
+>                                 xmlns:v="urn:schemas-microsoft-com:vml"
+>                                 xmlns:o="urn:schemas-microsoft-com:office:office"
+>                                 style={undefined}
+>                               >
+                              ...
+                  ...
+              ...
+      ...
+
+[00:12:13.890] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. div <html>
+[00:12:13.890] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:12:13.890] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:12:13.890] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:12:13.890] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:12:13.890] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:12:13.890] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:12:13.890] Browser ERROR   uncaughtError: Error: Target container is not a DOM element.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:12:13.890] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <div id="easy-email..." style={{display:"flex", ...}}>
+      <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+        <div style={{height:"100%", ...}} className={undefined}>
+          <div>
+          <div>
+          <div style={{display:"none", ...}}>
+            <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+              <DesktopEmailPreview>
+                <div style={{height:"100%"}}>
+                  <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                    <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                      <style>
+                      <div className="preview-co..." style={{height:"100%", ...}}>
+                        <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+>                         <head data-selector="0-0" style={undefined}>
+>                           {"\n    "}
+                            ...
+                          ...
+                      ...
+          ...
+      ...
+
+[00:18:22.716] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s html 
+
+  ...
+    <section ref={null} style={{height:"ca..."}} className="arco-layout">
+      <EmailEditor>
+        <div id="easy-email..." style={{display:"flex", ...}}>
+          <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+            <div style={{height:"100%", ...}} className={undefined}>
+              <div>
+              <div>
+              <div style={{display:"none", ...}}>
+                <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                  <DesktopEmailPreview>
+                    <div style={{height:"100%"}}>
+                      <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                        <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                          <style>
+                          <div className="preview-co..." style={{height:"100%", ...}}>
+>                           <html
+>                             data-selector="0"
+>                             lang="und"
+>                             dir="auto"
+>                             xmlns="http://www.w3.org/1999/xhtml"
+>                             xmlns:v="urn:schemas-microsoft-com:vml"
+>                             xmlns:o="urn:schemas-microsoft-com:office:office"
+>                             style={undefined}
+>                           >
+                              <head>
+>                             {"\n  "}
+                              ...
+                          ...
+              ...
+          ...
+
+[00:18:22.716] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s table 
+
+  ...
+    <DesktopEmailPreview>
+      <div style={{height:"100%"}}>
+        <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+          <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+            <style>
+            <div className="preview-co..." style={{height:"100%", ...}}>
+              <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+                <head>
+                <body data-selector="0-2" style={{...}}>
+                  <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" ...>
+                    <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+>                     <table
+>                       data-selector="0-2-1-3-1"
+>                       align="center"
+>                       border="0"
+>                       cellpadding="0"
+>                       cellspacing="0"
+>                       role="presentation"
+>                       style={{width:"100%"}}
+>                     >
+>                       {"\n          "}
+                        ...
+                      ...
+                    ...
+                  ...
+            ...
+
+[00:18:22.716] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+      <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+        <style>
+        <div className="preview-co..." style={{height:"100%", ...}}>
+          <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+            <head>
+            <body data-selector="0-2" style={{...}}>
+              <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+                <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+                  <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+>                   <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                     {"\n            "}
+                      ...
+                    ...
+                  ...
+                ...
+              ...
+        ...
+
+[00:18:22.716] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tr 
+
+  ...
+    <style>
+    <div className="preview-co..." style={{height:"100%", ...}}>
+      <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." xmlns:o="urn:schema..." ...>
+        <head>
+        <body data-selector="0-2" style={{...}}>
+          <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+            <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+              <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+                <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                 <tr data-selector="0-2-1-3-1-1-1" style={undefined}>
+>                   {"\n              "}
+                    ...
+                  ...
+                ...
+              ...
+            ...
+          ...
+    ...
+
+[00:18:22.716] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> div  
+
+  ...
+    <section ref={null} style={{display:"flex", ...}} className="arco-layou...">
+      <Sider>
+      <Layout style={{height:"ca..."}}>
+        <section ref={null} style={{height:"ca..."}} className="arco-layout">
+          <EmailEditor>
+            <div id="easy-email..." style={{display:"flex", ...}}>
+              <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+                <div style={{height:"100%", ...}} className={undefined}>
+                  <div>
+                  <div>
+                  <div style={{display:"none", ...}}>
+                    <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                      <DesktopEmailPreview>
+                        <div style={{height:"100%"}}>
+                          <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                            <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                              <style>
+>                             <div
+>                               className="preview-container easy-email-sync-scroll"
+>                               style={{height:"100%",overflow:"auto",margin:"auto",paddingLeft:10,paddingRight:10,paddingTop:40,paddingBottom:140, ...}}
+>                             >
+>                               <html
+>                                 data-selector="0"
+>                                 lang="und"
+>                                 dir="auto"
+>                                 xmlns="http://www.w3.org/1999/xhtml"
+>                                 xmlns:v="urn:schemas-microsoft-com:vml"
+>                                 xmlns:o="urn:schemas-microsoft-com:office:office"
+>                                 style={undefined}
+>                               >
+                              ...
+                  ...
+              ...
+      ...
+
+[00:18:22.716] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. div <html>
+[00:18:22.716] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:18:22.716] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:18:22.716] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:18:22.716] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:18:22.716] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:18:22.716] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:18:22.716] Browser ERROR   uncaughtError: Error: Target container is not a DOM element.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:18:22.716] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:14.354] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/editor" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         className="mdl-js"
+                        >
+                  ...
+
+[00:19:16.143] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <div id="easy-email..." style={{display:"flex", ...}}>
+      <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+        <div style={{height:"100%", ...}} className={undefined}>
+          <div>
+          <div>
+          <div style={{display:"none", ...}}>
+            <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+              <DesktopEmailPreview>
+                <div style={{height:"100%"}}>
+                  <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                    <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                      <style>
+                      <div className="preview-co..." style={{height:"100%", ...}}>
+                        <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+>                         <head data-selector="0-0" style={undefined}>
+>                           {"\n    "}
+                            ...
+                          ...
+                      ...
+          ...
+      ...
+
+[00:19:16.144] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s html 
+
+  ...
+    <section ref={null} style={{height:"ca..."}} className="arco-layout">
+      <EmailEditor>
+        <div id="easy-email..." style={{display:"flex", ...}}>
+          <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+            <div style={{height:"100%", ...}} className={undefined}>
+              <div>
+              <div>
+              <div style={{display:"none", ...}}>
+                <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                  <DesktopEmailPreview>
+                    <div style={{height:"100%"}}>
+                      <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                        <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                          <style>
+                          <div className="preview-co..." style={{height:"100%", ...}}>
+>                           <html
+>                             data-selector="0"
+>                             lang="und"
+>                             dir="auto"
+>                             xmlns="http://www.w3.org/1999/xhtml"
+>                             xmlns:v="urn:schemas-microsoft-com:vml"
+>                             xmlns:o="urn:schemas-microsoft-com:office:office"
+>                             style={undefined}
+>                           >
+                              <head>
+>                             {"\n  "}
+                              ...
+                          ...
+              ...
+          ...
+
+[00:19:16.144] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s table 
+
+  ...
+    <DesktopEmailPreview>
+      <div style={{height:"100%"}}>
+        <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+          <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+            <style>
+            <div className="preview-co..." style={{height:"100%", ...}}>
+              <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+                <head>
+                <body data-selector="0-2" style={{...}}>
+                  <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" ...>
+                    <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+>                     <table
+>                       data-selector="0-2-1-3-1"
+>                       align="center"
+>                       border="0"
+>                       cellpadding="0"
+>                       cellspacing="0"
+>                       role="presentation"
+>                       style={{width:"100%"}}
+>                     >
+>                       {"\n          "}
+                        ...
+                      ...
+                    ...
+                  ...
+            ...
+
+[00:19:16.144] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tbody 
+
+  ...
+    <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+      <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+        <style>
+        <div className="preview-co..." style={{height:"100%", ...}}>
+          <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." ...>
+            <head>
+            <body data-selector="0-2" style={{...}}>
+              <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+                <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+                  <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+>                   <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                     {"\n            "}
+                      ...
+                    ...
+                  ...
+                ...
+              ...
+        ...
+
+[00:19:16.144] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s tr 
+
+  ...
+    <style>
+    <div className="preview-co..." style={{height:"100%", ...}}>
+      <html data-selector="0" lang="und" dir="auto" xmlns="http://www..." xmlns:v="urn:schema..." xmlns:o="urn:schema..." ...>
+        <head>
+        <body data-selector="0-2" style={{...}}>
+          <div data-selector="0-2-1" aria-roledescription="email" style={{...}} role="article" lang="und" dir="auto">
+            <div data-selector="0-2-1-3" style={{maxWidth:"...", ...}}>
+              <table data-selector="0-2-1-3-1" align="center" border="0" cellpadding="0" cellspacing="0" ...>
+                <tbody data-selector="0-2-1-3-1-1" style={undefined}>
+>                 <tr data-selector="0-2-1-3-1-1-1" style={undefined}>
+>                   {"\n              "}
+                    ...
+                  ...
+                ...
+              ...
+            ...
+          ...
+    ...
+
+[00:19:16.144] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> div  
+
+  ...
+    <section ref={null} style={{display:"flex", ...}} className="arco-layou...">
+      <Sider>
+      <Layout style={{height:"ca..."}}>
+        <section ref={null} style={{height:"ca..."}} className="arco-layout">
+          <EmailEditor>
+            <div id="easy-email..." style={{display:"flex", ...}}>
+              <Tabs activeTab="EDIT" onBeforeChange={function EmailEditor.useCallback[onBeforeChangeTab]} ...>
+                <div style={{height:"100%", ...}} className={undefined}>
+                  <div>
+                  <div>
+                  <div style={{display:"none", ...}}>
+                    <TabPane style={{height:"ca..."}} tab={<Stack2>}>
+                      <DesktopEmailPreview>
+                        <div style={{height:"100%"}}>
+                          <SyncScrollShadowDom isActive={false} style={{border:"none", ...}}>
+                            <div style={{border:"none", ...}} ref={function bound dispatchSetState}>
+                              <style>
+>                             <div
+>                               className="preview-container easy-email-sync-scroll"
+>                               style={{height:"100%",overflow:"auto",margin:"auto",paddingLeft:10,paddingRight:10,paddingTop:40,paddingBottom:140, ...}}
+>                             >
+>                               <html
+>                                 data-selector="0"
+>                                 lang="und"
+>                                 dir="auto"
+>                                 xmlns="http://www.w3.org/1999/xhtml"
+>                                 xmlns:v="urn:schemas-microsoft-com:vml"
+>                                 xmlns:o="urn:schemas-microsoft-com:office:office"
+>                                 style={undefined}
+>                               >
+                              ...
+                  ...
+              ...
+      ...
+
+[00:19:16.144] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. div <html>
+[00:19:16.144] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:19:16.144] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:19:16.144] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:19:16.144] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:19:16.144] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. head head head
+[00:19:16.144] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:19:16.144] Browser ERROR   uncaughtError: Error: Target container is not a DOM element.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[00:19:16.144] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
