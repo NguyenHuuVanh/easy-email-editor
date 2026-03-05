@@ -150,7 +150,7 @@ export default function SubToolbar({ values }: SubToolbarProps) {
         </div>
         {/* Delete */}
         <div className="flex items-center gap-1.5">
-          <Tooltip position="top" content="Clear the entire canvas">
+          <Tooltip position="bottom" content="Clear the entire canvas">
             <button className="flex items-center justify-center h-7 w-7 border border-black text-black transition-all duration-150 cursor-pointer">
               <IconDelete className="w-4 h-4" />
             </button>
@@ -158,7 +158,7 @@ export default function SubToolbar({ values }: SubToolbarProps) {
         </div>
         {/* Right — Preview */}
         <div className="flex items-center gap-1.5">
-          <Tooltip position="top" content="Email preview">
+          <Tooltip position="bottom" content="Email preview">
             <button
               className="flex items-center justify-center h-7 w-7 border border-black text-black transition-all duration-150 cursor-pointer hover:bg-gray-100 hover:text-gray-700 
               "

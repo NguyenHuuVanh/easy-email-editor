@@ -204,7 +204,7 @@ export default function TopToolbar({
       <div className="pro-toolbar">
         {/* Left section */}
         <div className="pro-toolbar-left">
-          <Tooltip content="Back to templates">
+          <Tooltip position="bottom" content="Back to templates">
             <Button
               className="pro-toolbar-btn"
               icon={<IconLeft />}
@@ -247,7 +247,7 @@ export default function TopToolbar({
 
         {/* Right section */}
         <div className="pro-toolbar-right">
-          <Tooltip content="Undo (Ctrl+Z)">
+          <Tooltip position="bottom" content="Undo (Ctrl+Z)">
             <Button
               className="pro-toolbar-btn"
               icon={<IconUndo />}
@@ -255,7 +255,7 @@ export default function TopToolbar({
               onClick={undo}
             />
           </Tooltip>
-          <Tooltip content="Redo (Ctrl+Y)">
+          <Tooltip position="bottom" content="Redo (Ctrl+Y)">
             <Button
               className="pro-toolbar-btn"
               icon={<IconRedo />}
@@ -268,7 +268,7 @@ export default function TopToolbar({
 
           {/* Zoom controls */}
           <div className="pro-zoom-controls">
-            <Tooltip content="Zoom out">
+            <Tooltip position="bottom" content="Zoom out">
               <Button
                 className="pro-toolbar-btn"
                 icon={<IconZoomOut />}
@@ -277,7 +277,7 @@ export default function TopToolbar({
               />
             </Tooltip>
             <span className="pro-zoom-label">{zoom}%</span>
-            <Tooltip content="Zoom in">
+            <Tooltip position="bottom" content="Zoom in">
               <Button
                 className="pro-toolbar-btn"
                 icon={<IconZoomIn />}
@@ -289,7 +289,7 @@ export default function TopToolbar({
 
           <div className="pro-toolbar-divider" />
 
-          <Tooltip content="Import template">
+          <Tooltip position="bottom" content="Import template">
             <Button
               className="pro-toolbar-btn"
               icon={<IconImport />}
@@ -297,7 +297,7 @@ export default function TopToolbar({
             />
           </Tooltip>
 
-          <Tooltip content="Send test email">
+          <Tooltip position="bottom" content="Send test email">
             <Button
               className="pro-toolbar-btn"
               icon={<IconSend />}
