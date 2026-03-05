@@ -10,14 +10,8 @@ import {
   IconRedo,
   IconEmail,
 } from "@arco-design/web-react/icon";
-import {
-  useBlock,
-  useActiveTab,
-  useFocusIdx,
-  ActiveTabKeys,
-  IEmailTemplate,
-} from "easy-email-editor";
-import { JsonToMjml } from "easy-email-core";
+import { useBlock, useActiveTab, useFocusIdx, ActiveTabKeys, IEmailTemplate } from "easy-email-editor";
+import { BasicType, BlockManager, JsonToMjml } from "easy-email-core";
 import mjml from "mjml-browser";
 
 interface SubToolbarProps {
@@ -60,24 +54,28 @@ export default function SubToolbar({ values }: SubToolbarProps) {
   const isEditMode = activeTab === ActiveTabKeys.EDIT;
   const isDesktopMode = activeTab === ActiveTabKeys.PC;
   const isMobileMode = activeTab === ActiveTabKeys.MOBILE;
-  const canDelete = !!focusIdx && focusIdx !== "content";
 
   const handleDelete = useCallback(() => {
-    if (!canDelete) {
-      Message.warning("No block selected");
-      return;
-    }
     Modal.confirm({
-      title: "Delete Block",
-      content: "Are you sure you want to delete the selected block?",
+      title: "Clear Canvas",
+      content: "Are you sure you want to delete all blocks?",
       okButtonProps: { status: "danger" },
       onOk: () => {
-        removeBlock(focusIdx);
+        const pageBlock = BlockManager.getBlockByType(BasicType.PAGE);
+        if (pageBlock) {
+          const emptyPage = pageBlock.create({
+            children: [],
+          });
+        }
         setFocusIdx("content");
-        Message.success("Block deleted");
+        const childrenCount = values.content?.children?.length || 0;
+        for (let i = 0; i < childrenCount; i++) {
+          removeBlock(`content.children.[0]`);
+        }
+        Message.success("All blocks have been deleted");
       },
     });
-  }, [canDelete, focusIdx, removeBlock, setFocusIdx]);
+  }, [values.content, removeBlock, setFocusIdx]);
 
   const togglePreview = useCallback(() => {
     const next = !previewMode;
@@ -96,10 +94,10 @@ export default function SubToolbar({ values }: SubToolbarProps) {
       <div className="flex items-center p-0.5 gap-0">
         <div className="flex items-center">
           <button
-            className={`flex items-center gap-1.5 h-8 px-8 text-sm font-medium border border-black bg-transparent transition-all duration-150 cursor-pointer ${
+            className={`flex items-center gap-1.5 h-8 px-8 rounded-l-sm text-sm font-medium border border-black bg-transparent transition-all duration-150 cursor-pointer ${
               activeTab === ActiveTabKeys.EDIT
                 ? "z-20 bg-white text-blue-500 border border-blue-500 shadow-sm"
-                : "z-0 text-black hover:bg-gray-50"
+                : " text-black hover:bg-gray-50"
             }`}
             onClick={() => setActiveTab(ActiveTabKeys.EDIT)}
           >
@@ -110,7 +108,7 @@ export default function SubToolbar({ values }: SubToolbarProps) {
             className={`flex items-center gap-1.5 h-8 px-8 -ml-px text-sm font-medium border border-black bg-transparent transition-all duration-150 cursor-pointer ${
               activeTab === ActiveTabKeys.PC
                 ? "z-20 bg-white text-blue-500 border border-blue-500 shadow-sm"
-                : "z-0 text-black hover:bg-gray-50"
+                : " text-black hover:bg-gray-50"
             }`}
             onClick={() => setActiveTab(ActiveTabKeys.PC)}
           >
@@ -118,10 +116,10 @@ export default function SubToolbar({ values }: SubToolbarProps) {
             <IconDesktop className="w-4 h-4" />
           </button>
           <button
-            className={`flex items-center gap-1.5 h-8 px-8 -ml-px text-sm font-medium border border-black bg-transparent transition-all duration-150 cursor-pointer ${
+            className={`flex items-center gap-1.5 h-8 px-8 rounded-r-sm -ml-px text-sm font-medium border border-black bg-transparent transition-all duration-150 cursor-pointer ${
               activeTab === ActiveTabKeys.MOBILE
                 ? "z-20 bg-white text-blue-500 border border-blue-500 shadow-sm"
-                : "z-0 text-black hover:bg-gray-50"
+                : " text-black hover:bg-gray-50"
             }`}
             onClick={() => setActiveTab(ActiveTabKeys.MOBILE)}
           >
@@ -141,22 +139,14 @@ export default function SubToolbar({ values }: SubToolbarProps) {
           <div className="h-1.5 w-24 overflow-hidden rounded-full bg-gray-200">
             <div
               className={`h-full rounded-full transition-all duration-300 ${
-                isOverLimit
-                  ? "bg-red-500"
-                  : isNearLimit
-                    ? "bg-yellow-500"
-                    : "bg-green-500"
+                isOverLimit ? "bg-red-500" : isNearLimit ? "bg-yellow-500" : "bg-green-500"
               }`}
               style={{ width: `${sizePercent}%` }}
             />
           </div>
           <span
             className={`whitespace-nowrap tabular-nums ${
-              isOverLimit
-                ? "font-semibold text-red-500"
-                : isNearLimit
-                  ? "text-yellow-500"
-                  : "text-gray-500"
+              isOverLimit ? "font-semibold text-red-500" : isNearLimit ? "text-yellow-500" : "text-gray-500"
             }`}
           >
             {sizeKB} KB / 102 KB
@@ -166,12 +156,7 @@ export default function SubToolbar({ values }: SubToolbarProps) {
         <div className="flex items-center gap-1.5">
           <Tooltip position="top" content="Clear the entire canvas">
             <button
-              className={`flex items-center justify-center h-7 w-7 border border-black text-black transition-all duration-150 cursor-pointer ${
-                canDelete
-                  ? "hover:text-red-500 hover:bg-red-50 hover:border-red-200"
-                  : "opacity-35 cursor-not-allowed"
-              }`}
-              disabled={!canDelete}
+              className="flex items-center justify-center rounded px-5 py-[6px] border border-black text-black transition-all duration-150 cursor-pointer"
               onClick={handleDelete}
             >
               <IconDelete className="w-4 h-4" />
@@ -180,21 +165,12 @@ export default function SubToolbar({ values }: SubToolbarProps) {
         </div>
         {/* Right — Preview */}
         <div className="flex items-center gap-1.5">
-          <Tooltip
-            position="top"
-            content={previewMode ? "Exit preview" : "Email preview"}
-          >
+          <Tooltip position="top" content="Email preview">
             <button
-              className={`flex items-center justify-center h-7 w-7 border border-black text-black transition-all duration-150 cursor-pointer hover:bg-gray-100 hover:text-gray-700 ${
-                previewMode ? "bg-blue-50 text-blue-500 border-blue-200" : ""
-              }`}
-              onClick={togglePreview}
+              className="flex items-center justify-center rounded px-5 py-[6px] border border-black text-black transition-all duration-150 cursor-pointer hover:bg-gray-100 hover:text-gray-700 
+              "
             >
-              {previewMode ? (
-                <IconEdit className="w-4 h-4" />
-              ) : (
-                <IconEye className="w-4 h-4" />
-              )}
+              <IconEye className="w-4 h-4" />
             </button>
           </Tooltip>
         </div>
