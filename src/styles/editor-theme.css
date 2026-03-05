@@ -125,7 +125,7 @@
 
 .pro-device-btn {
   background: transparent !important;
-  border: none !important;
+  border: 1px solid black !important;
   /* color: rgba(255, 255, 255, 0.5) !important; */
   border-radius: 6px !important;
   height: 30px !important;
@@ -158,6 +158,28 @@
   min-width: 36px;
   text-align: center;
   font-variant-numeric: tabular-nums;
+}
+
+/* ---- Sub Toolbar — no Arco overrides needed, all Tailwind ---- */
+
+/* Preview Mode — hide easy-email selection outlines */
+.pro-preview-mode .email-block:hover,
+.pro-preview-mode .email-block[data-focused="true"],
+.pro-preview-mode [style*="outline"],
+.pro-preview-mode .easy-email-editor-hoverBlock,
+.pro-preview-mode .easy-email-editor-selectedBlock {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.pro-preview-mode .easy-email-editor-blockHover,
+.pro-preview-mode .easy-email-editor-blockSelected,
+.pro-preview-mode .easy-email-editor-dragIndicator {
+  display: none !important;
+}
+.pro-preview-mode .easy-email-editor-hoverToolbar,
+.pro-preview-mode .easy-email-editor-selectedToolbar,
+.pro-preview-mode .easy-email-editor-toolbar {
+  display: none !important;
 }
 
 /* ---- Editor Container ---- */
