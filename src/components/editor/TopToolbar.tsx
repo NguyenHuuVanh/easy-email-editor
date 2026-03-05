@@ -243,33 +243,7 @@ export default function TopToolbar({
         </div>
 
         {/* Center section — Device Toggle */}
-        <div className="pro-toolbar-center">
-          <div className="pro-device-toggle">
-            <div className="flex items-center">
-              <Button
-                className={`flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium transition-colors text-gray-600 hover:text-gray-900 ${activeTab === ActiveTabKeys.EDIT ? "bg-white text-gray-900 shadow-sm" : ""}`}
-                onClick={() => setActiveTab(ActiveTabKeys.EDIT)}
-              >
-                Edit
-                <IconEdit className="w-5 h-5" />
-              </Button>
-              <Button
-                className={`flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium transition-colors text-gray-600 hover:text-gray-900 ${activeTab === ActiveTabKeys.PC ? "bg-white text-gray-900 shadow-sm" : ""}`}
-                onClick={() => setActiveTab(ActiveTabKeys.PC)}
-              >
-                Desktop
-                <IconDesktop className="w-5 h-5" />
-              </Button>
-              <Button
-                className={`flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium transition-colors ${activeTab === ActiveTabKeys.MOBILE ? "bg-white text-gray-900 shadow-sm" : "bg-gray-100 text-gray-600 hover:text-gray-900"}`}
-                onClick={() => setActiveTab(ActiveTabKeys.MOBILE)}
-              >
-                <IconMobile className="w-5 h-5" />
-                Mobile
-              </Button>
-            </div>
-          </div>
-        </div>
+        <div className="pro-toolbar-center"></div>
 
         {/* Right section */}
         <div className="pro-toolbar-right">

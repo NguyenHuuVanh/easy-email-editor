@@ -26,6 +26,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 // Custom components
 import TopToolbar from "./editor/TopToolbar";
+import SubToolbar from "./editor/SubToolbar";
 import ImportDialog from "./editor/ImportDialog";
 import MergeTagPicker from "./editor/MergeTagPicker";
 import { LayersTab, SettingsTab, SavedBlocksTab } from "./editor/SidebarPanels";
@@ -357,6 +358,7 @@ export default function Editor() {
                     showSourceCode={true}
                     compact={false}
                   >
+                    <SubToolbar values={values} />
                     <EmailEditor />
                   </StandardLayout>
                 </div>
