@@ -1,25 +1,21 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import {
-  Button,
-  ConfigProvider,
-  Dropdown,
-  Menu,
-  Message,
-  PageHeader,
-  Select,
-} from "@arco-design/web-react";
-import { IconLeft } from "@arco-design/web-react/icon";
-import mjml from "mjml-browser";
-import { saveAs } from "file-saver";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  useRef,
+} from "react";
+import { ConfigProvider, Message, Spin } from "@arco-design/web-react";
 import {
   EmailEditor,
   EmailEditorProvider,
   IEmailTemplate,
-  Stack,
+  ActiveTabKeys,
+  AvailableTools,
 } from "easy-email-editor";
 
-import { JsonToMjml } from "easy-email-core";
-import { SimpleLayout } from "easy-email-extensions";
+import { AdvancedType, JsonToMjml } from "easy-email-core";
+import { StandardLayout } from "easy-email-extensions";
 
 import "@arco-themes/react-easy-email-theme/css/arco.css";
 import "easy-email-editor/lib/style.css";
@@ -28,66 +24,109 @@ import "easy-email-extensions/lib/style.css";
 import enUS from "@arco-design/web-react/es/locale/en-US";
 import { useRouter, useSearchParams } from "next/navigation";
 
+// Custom components
+import TopToolbar from "./editor/TopToolbar";
+import ImportDialog from "./editor/ImportDialog";
+import MergeTagPicker from "./editor/MergeTagPicker";
+import { LayersTab, SettingsTab, SavedBlocksTab } from "./editor/SidebarPanels";
+import {
+  registerCustomBlocks,
+  QR_CODE_BLOCK_TYPE,
+  VIDEO_BLOCK_TYPE,
+  COUNTDOWN_BLOCK_TYPE,
+} from "./editor/CustomBlocks";
+
+// Data
+import { mergeTags, mergeTagGenerate } from "@/data/merge-tags";
+import { uploadImage, saveTemplate } from "@/services/image-upload";
+
+// Register custom blocks on module load
+let blocksRegistered = false;
+if (!blocksRegistered) {
+  try {
+    registerCustomBlocks();
+    blocksRegistered = true;
+  } catch (e) {
+    // Already registered
+  }
+}
+
 export default function Editor() {
   const [template, setTemplate] = useState<IEmailTemplate | null>(null);
   const [loading, setLoading] = useState(false);
+  const [importVisible, setImportVisible] = useState(false);
+  const [zoom, setZoom] = useState(100);
+  const autosaveTimer = useRef<NodeJS.Timeout | null>(null);
 
   const searchParams = useSearchParams();
-  const id = searchParams?.get("id");
+  const id = searchParams?.get("id") || "1";
   const router = useRouter();
-  const onUploadImage = async (blob: Blob) => {
-    return Promise.resolve(URL.createObjectURL(blob));
-  };
 
+  // Image upload handler — connects to backend with blob fallback
+  const onUploadImage = useCallback(async (blob: Blob) => {
+    try {
+      const url = await uploadImage(blob);
+      return url;
+    } catch {
+      return URL.createObjectURL(blob);
+    }
+  }, []);
+
+  // Load template
   useEffect(() => {
-    console.log("id", id);
     setLoading(true);
+
+    // Try to load from localStorage first (autosaved)
+    const saved = localStorage.getItem(`email-template-${id}`);
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        setTemplate(parsed);
+        setLoading(false);
+        return;
+      } catch {
+        // Fall through to file loading
+      }
+    }
+
     import(`../data/template${id}.json`)
       .then((data) => {
-        const template = data.content;
-
+        const templateContent = data.content;
         setTemplate({
-          content: template,
+          content: templateContent,
           subject: "New Template",
           subTitle: "New Template",
         });
+      })
+      .catch((err) => {
+        console.error("Failed to load template:", err);
+        Message.error("Failed to load template");
       })
       .finally(() => {
         setLoading(false);
       });
   }, [id]);
 
-  const onExportMJML = (values: IEmailTemplate) => {
-    const mjmlString = JsonToMjml({
-      data: values.content,
-      mode: "production",
-      context: values.content,
-    });
+  // Autosave every 30 seconds
+  const setupAutosave = useCallback(
+    (values: IEmailTemplate) => {
+      if (autosaveTimer.current) {
+        clearInterval(autosaveTimer.current);
+      }
+      autosaveTimer.current = setInterval(() => {
+        localStorage.setItem(`email-template-${id}`, JSON.stringify(values));
+      }, 30000);
+    },
+    [id],
+  );
 
-    navigator.clipboard.writeText(mjmlString);
-    saveAs(new Blob([mjmlString], { type: "text/mjml" }), "easy-email.mjml");
-  };
-
-  const onExportHTML = (values: IEmailTemplate) => {
-    const mjmlString = JsonToMjml({
-      data: values.content,
-      mode: "production",
-      context: values.content,
-    });
-
-    const html = mjml(mjmlString, {}).html;
-
-    navigator.clipboard.writeText(html);
-    saveAs(new Blob([html], { type: "text/html" }), "easy-email.html");
-  };
-
-  const onExportJSON = (values: IEmailTemplate) => {
-    navigator.clipboard.writeText(JSON.stringify(values, null, 2));
-    saveAs(
-      new Blob([JSON.stringify(values, null, 2)], { type: "application/json" }),
-      "easy-email.json",
-    );
-  };
+  useEffect(() => {
+    return () => {
+      if (autosaveTimer.current) {
+        clearInterval(autosaveTimer.current);
+      }
+    };
+  }, []);
 
   const initialValues: IEmailTemplate | null = useMemo(() => {
     if (!template) return null;
@@ -96,139 +135,237 @@ export default function Editor() {
 
   const onSubmit = useCallback(
     async (values: IEmailTemplate) => {
-      console.log(values);
+      console.log("Submit:", values);
+      localStorage.setItem(`email-template-${id}`, JSON.stringify(values));
+      Message.success("Template saved!");
     },
-    [initialValues],
+    [id],
   );
 
-  if (!initialValues) return null;
+  // StandardLayout categories — sidebar tabs
+  const categories = useMemo(
+    () => [
+      {
+        label: "Content",
+        active: true,
+        displayType: "grid" as const,
+        blocks: [
+          {
+            type: AdvancedType.TEXT,
+            title: "Text",
+          },
+          {
+            type: AdvancedType.IMAGE,
+            title: "Image",
+          },
+          {
+            type: AdvancedType.BUTTON,
+            title: "Button",
+          },
+          {
+            type: AdvancedType.DIVIDER,
+            title: "Divider",
+          },
+          {
+            type: AdvancedType.SPACER,
+            title: "Spacer",
+          },
+          {
+            type: AdvancedType.NAVBAR,
+            title: "Navbar",
+          },
+          {
+            type: AdvancedType.SOCIAL,
+            title: "Social",
+          },
+          {
+            type: AdvancedType.HERO,
+            title: "Hero",
+          },
+          {
+            type: AdvancedType.TABLE,
+            title: "Table",
+          },
+          {
+            type: AdvancedType.CAROUSEL,
+            title: "Carousel",
+          },
+          {
+            type: AdvancedType.ACCORDION,
+            title: "Accordion",
+          },
+          {
+            type: AdvancedType.SECTION,
+            title: "Section",
+          },
+          {
+            type: AdvancedType.COLUMN,
+            title: "Column",
+          },
+          {
+            type: AdvancedType.GROUP,
+            title: "Group",
+          },
+          {
+            type: AdvancedType.WRAPPER,
+            title: "Wrapper",
+          },
+          {
+            type: QR_CODE_BLOCK_TYPE,
+            title: "QR Code",
+          },
+          {
+            type: VIDEO_BLOCK_TYPE,
+            title: "Video",
+          },
+          {
+            type: COUNTDOWN_BLOCK_TYPE,
+            title: "Countdown",
+          },
+        ],
+      },
+      {
+        label: "Blocks",
+        displayType: "custom" as const,
+        blocks: [<SavedBlocksTab key="saved-blocks" />],
+      },
+      {
+        label: "Layers",
+        displayType: "custom" as const,
+        blocks: [<LayersTab key="layers" />],
+      },
+      {
+        label: "Settings",
+        displayType: "custom" as const,
+        blocks: [<SettingsTab key="settings" />],
+      },
+    ],
+    [],
+  );
+
+  if (!initialValues) {
+    return (
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "#f0f2f5",
+        }}
+      >
+        <Spin size={40} tip="Loading template..." />
+      </div>
+    );
+  }
 
   return (
     <ConfigProvider locale={enUS}>
-      <div>
+      <div className="pro-editor-container">
         <EmailEditorProvider
-          height={"calc(100vh - 68px)"}
+          height={"calc(100vh - 52px)"}
           data={initialValues}
           onUploadImage={onUploadImage}
           onSubmit={onSubmit}
           dashed={false}
+          enabledLogic
+          mergeTags={mergeTags}
+          mergeTagGenerate={mergeTagGenerate}
+          enabledMergeTagsBadge
+          renderMergeTagContent={(props) => (
+            <MergeTagPicker
+              onChange={props.onChange}
+              value={props.value}
+              isSelect={props.isSelect}
+            />
+          )}
+          toolbar={{
+            tools: [
+              AvailableTools.Bold,
+              AvailableTools.Italic,
+              AvailableTools.Underline,
+              AvailableTools.StrikeThrough,
+              AvailableTools.FontFamily,
+              AvailableTools.FontSize,
+              AvailableTools.IconFontColor,
+              AvailableTools.IconBgColor,
+              AvailableTools.Link,
+              AvailableTools.Justify,
+              AvailableTools.Lists,
+              AvailableTools.HorizontalRule,
+              AvailableTools.MergeTags,
+              AvailableTools.RemoveFormat,
+            ],
+          }}
+          interactiveStyle={{
+            hoverColor: "#4f6ef7",
+            selectedColor: "#4f6ef7",
+            dragoverColor: "#e8f0fe",
+            tangentColor: "#ff6b6b",
+          }}
+          fontList={[
+            { value: "Arial", label: "Arial" },
+            { value: "Georgia", label: "Georgia" },
+            { value: "Helvetica", label: "Helvetica" },
+            { value: "Lucida Grande", label: "Lucida Grande" },
+            { value: "Tahoma", label: "Tahoma" },
+            { value: "Times New Roman", label: "Times New Roman" },
+            { value: "Trebuchet MS", label: "Trebuchet MS" },
+            { value: "Verdana", label: "Verdana" },
+            {
+              value: "'Courier New', Courier, monospace",
+              label: "Courier New",
+            },
+            {
+              value:
+                "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+              label: "System Default",
+            },
+          ]}
         >
           {({ values }, { submit, restart }) => {
+            // Setup autosave on values change
+            setupAutosave(values);
+
             return (
               <>
-                <PageHeader
-                  style={{
-                    background:
-                      "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-                    color: "#fff",
-                    padding: "12px 24px",
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                  }}
-                  backIcon={
-                    <IconLeft
-                      style={{
-                        color: "#fff",
-                        fontSize: "20px",
-                        fontWeight: "bold",
-                      }}
-                    />
-                  }
-                  title={
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "24px",
-                      }}
-                    >
-                      <span style={{ color: "#fff", fontWeight: "bold" }}>
-                        Edit
-                      </span>
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "12px",
-                          fontSize: "13px",
-                          opacity: 0.95,
-                          flexWrap: "nowrap",
-                        }}
-                      >
-                        <span style={{ whiteSpace: "nowrap", color: "#fff" }}>
-                          🚀 Try Easy Email Pro
-                        </span>
-                        <span style={{ whiteSpace: "nowrap", color: "#fff" }}>
-                          ✅ Cross-browser support
-                        </span>
-                        <span style={{ whiteSpace: "nowrap", color: "#fff" }}>
-                          ✅ React 19 support
-                        </span>
-                        <span style={{ whiteSpace: "nowrap", color: "#fff" }}>
-                          ✅ Desktop & Mobile Email Preview
-                        </span>
-                        <span style={{ whiteSpace: "nowrap", color: "#fff" }}>
-                          ✅ More advanced features
-                        </span>
-                      </div>
-                    </div>
-                  }
+                {/* Top Toolbar */}
+                <TopToolbar
+                  values={values}
                   onBack={() => router.push("/")}
-                  extra={
-                    <Stack alignment="center">
-                      <Dropdown
-                        droplist={
-                          <Menu>
-                            <Menu.Item
-                              key="Export MJML"
-                              onClick={() => onExportMJML(values)}
-                            >
-                              Export MJML
-                            </Menu.Item>
-                            <Menu.Item
-                              key="Export HTML"
-                              onClick={() => onExportHTML(values)}
-                            >
-                              Export HTML
-                            </Menu.Item>
-                            <Menu.Item
-                              key="Export JSON"
-                              onClick={() => onExportJSON(values)}
-                            >
-                              Export JSON
-                            </Menu.Item>
-                          </Menu>
-                        }
-                      >
-                        <Button
-                          style={{
-                            background: "rgba(255,255,255,0.2)",
-                            color: "#fff",
-                            border: "none",
-                          }}
-                        >
-                          <strong>Export</strong>
-                        </Button>
-                      </Dropdown>
-                      <Button
-                        type="primary"
-                        target="_blank"
-                        href="https://demo.easyemail.pro?utm_source=easyemail"
-                        style={{
-                          background: "#fff",
-                          color: "#667eea",
-                          border: "none",
-                          fontWeight: "bold",
-                        }}
-                      >
-                        Try Pro Version
-                      </Button>
-                    </Stack>
-                  }
+                  onImport={() => setImportVisible(true)}
+                  templateId={id}
+                  zoom={zoom}
+                  onZoomChange={setZoom}
                 />
 
-                <SimpleLayout>
-                  <EmailEditor />
-                </SimpleLayout>
+                {/* Editor Body with StandardLayout */}
+                <div
+                  className="pro-editor-body"
+                  style={
+                    zoom !== 100
+                      ? {
+                          transform: `scale(${zoom / 100})`,
+                          transformOrigin: "top center",
+                          height: `calc((100vh - 52px) * ${100 / zoom})`,
+                        }
+                      : undefined
+                  }
+                >
+                  <StandardLayout
+                    categories={categories}
+                    showSourceCode={true}
+                    compact={false}
+                  >
+                    <EmailEditor />
+                  </StandardLayout>
+                </div>
+
+                {/* Import Dialog */}
+                <ImportDialog
+                  visible={importVisible}
+                  onClose={() => setImportVisible(false)}
+                />
               </>
             );
           }}

@@ -1,0 +1,445 @@
+/* =====================================================
+   Easy Email Pro Theme — Custom CSS
+   Dark header + Light canvas, matching Pro aesthetics
+   ===================================================== */
+
+/* ---- Top Toolbar ---- */
+.pro-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 0 16px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.pro-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.pro-toolbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pro-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arco-btn-secondary.arco-btn-disabled {
+  background: unset !important;
+}
+
+.pro-toolbar-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.pro-toolbar-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 0 4px;
+}
+
+.pro-toolbar-btn {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #d0d0d0 !important;
+  height: 32px !important;
+  width: 32px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.15s ease !important;
+}
+.pro-toolbar-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+.pro-toolbar-btn:disabled {
+  opacity: 0.35 !important;
+  cursor: not-allowed !important;
+}
+
+.pro-toolbar-btn-accent {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  height: 32px !important;
+  padding: 0 12px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  transition: all 0.15s ease !important;
+}
+.pro-toolbar-btn-accent:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.pro-toolbar-btn-primary {
+  background: #4f6ef7 !important;
+  border: none !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  height: 32px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  transition: all 0.15s ease !important;
+}
+.pro-toolbar-btn-primary:hover {
+  background: #3b5de7 !important;
+}
+
+/* ---- Device Toggle ---- */
+.pro-device-toggle {
+  display: flex;
+  align-items: center;
+  /* background: rgba(255, 255, 255, 0.06); */
+  /* border-radius: 8px; */
+  padding: 3px;
+  gap: 2px;
+}
+
+.pro-device-btn {
+  background: transparent !important;
+  border: none !important;
+  /* color: rgba(255, 255, 255, 0.5) !important; */
+  border-radius: 6px !important;
+  height: 30px !important;
+  width: 36px !important;
+  padding: 0 !important;
+  transition: all 0.15s ease !important;
+}
+.pro-device-btn:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+.pro-device-btn.active {
+  background: rgba(79, 110, 247, 0.35) !important;
+  color: #fff !important;
+}
+
+.arco-btn-size-default {
+  border-radius: unset !important;
+}
+
+/* ---- Zoom ---- */
+.pro-zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.pro-zoom-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  min-width: 36px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Editor Container ---- */
+.pro-editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: #f0f2f5;
+}
+
+.pro-editor-body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ---- Sidebar Panels ---- */
+.pro-sidebar-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.pro-sidebar-panel-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 4px;
+}
+
+.pro-layers-container {
+  flex: 1;
+  overflow: auto;
+  padding: 4px 0;
+}
+
+.pro-layer-title {
+  font-size: 12px;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+  display: inline-block;
+}
+
+/* ---- Settings Tab ---- */
+.pro-setting-row {
+  margin-bottom: 10px;
+}
+.pro-setting-row > label {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+/* ---- Saved Blocks ---- */
+.pro-saved-blocks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.pro-saved-block-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 8px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pro-saved-block-item:hover {
+  border-color: #4f6ef7;
+  background: #f5f7ff;
+}
+.pro-saved-block-thumb {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background: #f5f5f5;
+}
+.pro-saved-block-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.pro-saved-block-name {
+  font-size: 11px;
+  color: #555;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* =====================================================
+   Override easy-email internal styles
+   ===================================================== */
+
+/* ---- Hide the internal editor header bar ---- */
+/* The internal header (Edit/Desktop/Mobile icons + undo/redo)
+   is redundant since we have our own TopToolbar */
+.easy-email-editor-tabWrapper {
+  display: none !important;
+}
+
+/* Fix tab content height after hiding the 50px header */
+#easy-email-editor .easy-email-editor-tabWrapper + div,
+#easy-email-editor > div > div > div {
+  height: 100% !important;
+}
+
+/* ---- Move sidebar (Block/Layer panel) to the LEFT side ---- */
+/* Ensure the flex container children are ordered:
+   LEFT: EditPanel (Block/Layer tabs) 
+   CENTER: Email canvas
+   RIGHT: ConfigurationPanel (block properties) */
+._StandardLayout_xv0bc_1 {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+section.arco-layout {
+  order: 0 !important;
+}
+
+/* EditPanel sider (Block/Layer tabs) → leftmost */
+._StandardLayout_xv0bc_1 > .arco-layout:first-child {
+  order: 1 !important;
+  border-right: 1px solid #e8e8e8 !important;
+  border-left: none !important;
+}
+
+/* Center layout (email editor canvas) */
+._StandardLayout_xv0bc_1 > .arco-layout {
+  order: 0 !important;
+}
+
+/* ConfigurationPanel sider → rightmost */
+._StandardLayout_xv0bc_1 > .arco-layout-sider:last-child {
+  order: 1 !important;
+  border-left: 1px solid #e8e8e8 !important;
+}
+
+/* Main editor layout */
+.easy-email-editor {
+  background: #f0f2f5 !important;
+}
+
+/* Left sidebar styling */
+.easy-email-extensions-StandardLayout .easy-email-extensions-tabsContainer,
+.easy-email-extensions-SimpleLayout .easy-email-extensions-tabsContainer {
+  background: #fff !important;
+  border-right: 1px solid #e8e8e8 !important;
+}
+
+/* Category tab items */
+.easy-email-extensions-tabsItem {
+  font-size: 13px !important;
+  color: #555 !important;
+}
+.easy-email-extensions-tabsItem.easy-email-extensions-tabsItemActive {
+  color: #4f6ef7 !important;
+  border-bottom-color: #4f6ef7 !important;
+}
+
+/* Block items in grid */
+.easy-email-extensions-blockItem {
+  border: 1px solid #eee !important;
+  border-radius: 8px !important;
+  transition: all 0.15s ease !important;
+  background: #fafafa !important;
+}
+.easy-email-extensions-blockItem:hover {
+  border-color: #4f6ef7 !important;
+  background: #f0f4ff !important;
+  box-shadow: 0 2px 8px rgba(79, 110, 247, 0.1) !important;
+}
+
+/* Right config panel */
+.easy-email-extensions-rightPanel,
+.easy-email-extensions-ConfigurationPanel {
+  background: #fff !important;
+  border-left: 1px solid #e8e8e8 !important;
+}
+
+/* Editor canvas area */
+.easy-email-editor-editPanel,
+.easy-email-editor-tabsContainer,
+.shadow-container {
+  background: #f0f2f5 !important;
+}
+
+/* Interactive hover/focus colors */
+.email-block {
+  transition: outline 0.1s ease !important;
+}
+
+/* Block layer panel */
+.easy-email-extensions-blockLayerItem {
+  font-size: 12px !important;
+}
+.easy-email-extensions-blockLayerItemActive {
+  background: #e8f0fe !important;
+  color: #4f6ef7 !important;
+}
+
+/* Source code panel */
+.easy-email-extensions-sourceCodePanel {
+  background: #1e1e2e !important;
+}
+
+/* Arco design overrides for editor context */
+.pro-editor-container .arco-tabs-header-nav-line .arco-tabs-header-ink-bar {
+  background: #4f6ef7 !important;
+}
+.pro-editor-container .arco-collapse-item-header {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+/* Scrollbar styling */
+.pro-sidebar-panel ::-webkit-scrollbar,
+.pro-layers-container ::-webkit-scrollbar {
+  width: 6px;
+}
+.pro-sidebar-panel ::-webkit-scrollbar-track,
+.pro-layers-container ::-webkit-scrollbar-track {
+  background: transparent;
+}
+.pro-sidebar-panel ::-webkit-scrollbar-thumb,
+.pro-layers-container ::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 3px;
+}
+.pro-sidebar-panel ::-webkit-scrollbar-thumb:hover,
+.pro-layers-container ::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+.shadow-container.easy-email-sync-scroll {
+  margin-top: 22px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .pro-toolbar-title {
+    max-width: 120px;
+  }
+}
+@media (max-width: 1024px) {
+  .pro-toolbar-center {
+    display: none;
+  }
+}
+
+/* =====================================================
+   Zoom wrapper
+   ===================================================== */
+.pro-zoom-wrapper {
+  transform-origin: top center;
+  transition: transform 0.2s ease;
+}
+
+/* =====================================================
+   Arco-design dropdown & modal adjustments
+   ===================================================== */
+.arco-dropdown-menu-item {
+  font-size: 13px !important;
+}
