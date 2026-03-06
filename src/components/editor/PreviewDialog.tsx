@@ -9,7 +9,11 @@ import { IEmailTemplate } from "easy-email-editor";
 import { JsonToMjml } from "easy-email-core";
 import mjml from "mjml-browser";
 import DynamicDataDialog from "./DynamicDataDialog";
-import { getValueByPath } from "@/data/merge-tags";
+import {
+  getValueByPath,
+  MergeTagItem,
+  mergeTagDefinitions,
+} from "@/data/merge-tags";
 
 interface PreviewDialogProps {
   visible: boolean;
@@ -17,6 +21,7 @@ interface PreviewDialogProps {
   values: IEmailTemplate;
   mergeTagsData: Record<string, any>;
   onMergeTagsDataChange: (data: Record<string, any>) => void;
+  definitions?: MergeTagItem[];
 }
 
 // Replace {{path}} merge tags in a string with actual values
@@ -54,6 +59,7 @@ export default function PreviewDialog({
   values,
   mergeTagsData,
   onMergeTagsDataChange,
+  definitions,
 }: PreviewDialogProps) {
   const [device, setDevice] = useState<"desktop" | "mobile">("desktop");
   const [editVarsVisible, setEditVarsVisible] = useState(false);
@@ -254,6 +260,7 @@ export default function PreviewDialog({
         visible={editVarsVisible}
         onClose={() => setEditVarsVisible(false)}
         data={mergeTagsData}
+        definitions={definitions || mergeTagDefinitions}
         onChange={onMergeTagsDataChange}
       />
     </div>

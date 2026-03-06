@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Tree, Input, Tag } from "@arco-design/web-react";
 import { IconSearch } from "@arco-design/web-react/icon";
 import {
-  mergeTagDefinitions,
+  mergeTagDefinitions as defaultDefinitions,
   mergeTagGenerate,
   MergeTagItem,
 } from "@/data/merge-tags";
@@ -11,6 +11,7 @@ interface MergeTagPickerProps {
   onChange: (val: string) => void;
   value: string;
   isSelect: boolean;
+  definitions?: MergeTagItem[];
 }
 
 interface TreeNodeData {
@@ -78,12 +79,14 @@ export default function MergeTagPicker({
   onChange,
   value,
   isSelect,
+  definitions,
 }: MergeTagPickerProps) {
   const [search, setSearch] = useState("");
+  const defs = definitions || defaultDefinitions;
 
-  const filtered = filterDefinitions(mergeTagDefinitions, search);
+  const filtered = filterDefinitions(defs, search);
   const treeData = buildTreeFromDefinitions(filtered);
-  const defaultExpanded = mergeTagDefinitions.map((d) => d.value || d.label);
+  const defaultExpanded = defs.map((d) => d.value || d.label);
 
   return (
     <div

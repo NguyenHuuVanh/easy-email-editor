@@ -43,7 +43,9 @@ import {
 import {
   mergeTags,
   mergeTagGenerate,
+  mergeTagDefinitions as defaultDefinitions,
   defaultMergeTagsData,
+  MergeTagItem,
 } from "@/data/merge-tags";
 import { uploadImage, saveTemplate } from "@/services/image-upload";
 
@@ -65,6 +67,8 @@ export default function Editor() {
   const [dynamicDataVisible, setDynamicDataVisible] = useState(false);
   const [previewVisible, setPreviewVisible] = useState(false);
   const [mergeTagsData, setMergeTagsData] = useState(defaultMergeTagsData);
+  const [definitions, setDefinitions] =
+    useState<MergeTagItem[]>(defaultDefinitions);
   const [mergeTagsVersion, setMergeTagsVersion] = useState(0);
   const [zoom, setZoom] = useState(100);
   const autosaveTimer = useRef<NodeJS.Timeout | null>(null);
@@ -354,6 +358,7 @@ export default function Editor() {
               onChange={props.onChange}
               value={props.value}
               isSelect={props.isSelect}
+              definitions={definitions}
             />
           )}
           toolbar={{
@@ -455,10 +460,11 @@ export default function Editor() {
                   visible={dynamicDataVisible}
                   onClose={() => setDynamicDataVisible(false)}
                   data={mergeTagsData}
-                  onChange={(newData) => {
-                    // Save current editor state before re-mount
+                  definitions={definitions}
+                  onChange={(newData, newDefs) => {
                     setTemplate(values);
                     setMergeTagsData(newData);
+                    if (newDefs) setDefinitions(newDefs);
                     setMergeTagsVersion((v) => v + 1);
                   }}
                 />
@@ -469,6 +475,7 @@ export default function Editor() {
                   onClose={() => setPreviewVisible(false)}
                   values={values}
                   mergeTagsData={mergeTagsData}
+                  definitions={definitions}
                   onMergeTagsDataChange={(newData) => {
                     setMergeTagsData(newData);
                   }}
