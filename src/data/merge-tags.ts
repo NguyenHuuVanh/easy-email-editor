@@ -112,7 +112,8 @@ export const mergeTagGenerate = (tag: string) => `{{${tag}}}`;
 
 // Helper: get value from nested object by dot path
 export function getValueByPath(obj: Record<string, any>, path: string): string {
-  return path.split(".").reduce((acc, key) => acc?.[key], obj) ?? "";
+  const result = path.split(".").reduce<any>((acc, key) => acc?.[key], obj);
+  return result ?? "";
 }
 
 // Helper: set value in nested object by dot path
