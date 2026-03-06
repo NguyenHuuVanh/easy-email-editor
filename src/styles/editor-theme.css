@@ -341,7 +341,7 @@ section.arco-layout {
 
 /* Main editor layout */
 .easy-email-editor {
-  background: #f0f2f5 !important;
+  background: #dddfe5 !important;
 }
 
 /* Left sidebar styling */
@@ -385,7 +385,7 @@ section.arco-layout {
 .easy-email-editor-editPanel,
 .easy-email-editor-tabsContainer,
 .shadow-container {
-  background: #f0f2f5 !important;
+  background: #dddfe5 !important;
 }
 
 /* Interactive hover/focus colors */
@@ -435,9 +435,7 @@ section.arco-layout {
   background: #bbb;
 }
 
-.shadow-container.easy-email-sync-scroll {
-  margin-top: 22px !important;
-}
+/* Shadow DOM styles are injected via JS in editor.tsx */
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {

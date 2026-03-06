@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-import { Tree, Input } from "@arco-design/web-react";
+import { Tree, Input, Tag } from "@arco-design/web-react";
 import { IconSearch } from "@arco-design/web-react/icon";
+import {
+  mergeTagDefinitions,
+  mergeTagGenerate,
+  MergeTagItem,
+} from "@/data/merge-tags";
 
 interface MergeTagPickerProps {
   onChange: (val: string) => void;
@@ -9,31 +14,64 @@ interface MergeTagPickerProps {
 }
 
 interface TreeNodeData {
-  title: string;
+  title: string | React.ReactNode;
   key: string;
   children?: TreeNodeData[];
   isLeaf?: boolean;
 }
 
-function buildTreeData(
-  obj: Record<string, any>,
-  parentKey = "",
-): TreeNodeData[] {
-  return Object.entries(obj).map(([key, value]) => {
-    const fullKey = parentKey ? `${parentKey}.${key}` : key;
-    if (typeof value === "object" && value !== null && !Array.isArray(value)) {
+const TYPE_COLORS: Record<string, string> = {
+  text: "blue",
+  image: "green",
+  link: "purple",
+};
+
+function buildTreeFromDefinitions(items: MergeTagItem[]): TreeNodeData[] {
+  return items.map((item) => {
+    if (item.children && item.children.length > 0) {
       return {
-        title: key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
-        key: fullKey,
-        children: buildTreeData(value, fullKey),
+        title: item.label,
+        key: item.value || item.label,
+        children: buildTreeFromDefinitions(item.children),
       };
     }
     return {
-      title: key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
-      key: fullKey,
+      title: (
+        <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          {item.label}
+          {item.type && (
+            <Tag
+              size="small"
+              color={TYPE_COLORS[item.type] || "gray"}
+              style={{ fontSize: 10, lineHeight: "16px", padding: "0 4px" }}
+            >
+              {item.type}
+            </Tag>
+          )}
+        </span>
+      ),
+      key: item.value,
       isLeaf: true,
     };
   });
+}
+
+function filterDefinitions(
+  items: MergeTagItem[],
+  search: string,
+): MergeTagItem[] {
+  if (!search) return items;
+  return items
+    .map((item) => {
+      if (item.children) {
+        const filtered = filterDefinitions(item.children, search);
+        if (filtered.length > 0) return { ...item, children: filtered };
+      }
+      if (item.label.toLowerCase().includes(search.toLowerCase())) return item;
+      if (item.value.toLowerCase().includes(search.toLowerCase())) return item;
+      return null;
+    })
+    .filter(Boolean) as MergeTagItem[];
 }
 
 export default function MergeTagPicker({
@@ -43,40 +81,25 @@ export default function MergeTagPicker({
 }: MergeTagPickerProps) {
   const [search, setSearch] = useState("");
 
-  // Import merge tags
-  const { mergeTags } = require("@/data/merge-tags");
-  const treeData = buildTreeData(mergeTags);
-
-  const filterTree = (nodes: TreeNodeData[]): TreeNodeData[] => {
-    if (!search) return nodes;
-    return nodes
-      .map((node) => {
-        if (node.children) {
-          const filtered = filterTree(node.children);
-          if (filtered.length > 0) return { ...node, children: filtered };
-        }
-        if (node.title.toLowerCase().includes(search.toLowerCase()))
-          return node;
-        return null;
-      })
-      .filter(Boolean) as TreeNodeData[];
-  };
+  const filtered = filterDefinitions(mergeTagDefinitions, search);
+  const treeData = buildTreeFromDefinitions(filtered);
+  const defaultExpanded = mergeTagDefinitions.map((d) => d.value || d.label);
 
   return (
     <div
       style={{
         padding: "8px",
-        minWidth: 240,
-        maxHeight: 360,
+        minWidth: 260,
+        maxHeight: 400,
         overflow: "auto",
       }}
     >
       <div style={{ marginBottom: 8, fontWeight: 600, fontSize: 13 }}>
-        Insert Merge Tag
+        Insert Dynamic Variable
       </div>
       <Input
         allowClear
-        placeholder="Search tags..."
+        placeholder="Search variables..."
         prefix={<IconSearch />}
         value={search}
         onChange={setSearch}
@@ -84,12 +107,12 @@ export default function MergeTagPicker({
         size="small"
       />
       <Tree
-        treeData={filterTree(treeData)}
-        defaultExpandedKeys={treeData.map((n) => n.key)}
+        treeData={treeData}
+        defaultExpandedKeys={defaultExpanded}
         size="small"
         onSelect={(keys) => {
           if (keys.length > 0) {
-            onChange(keys[0] as string);
+            onChange(mergeTagGenerate(keys[0] as string));
           }
         }}
         style={{ fontSize: 12 }}

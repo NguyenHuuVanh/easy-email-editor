@@ -44,6 +44,8 @@ interface TopToolbarProps {
   values: IEmailTemplate;
   onBack: () => void;
   onImport: () => void;
+  onEditVariables?: () => void;
+  onPreview?: () => void;
   templateId: string;
   zoom: number;
   onZoomChange: (zoom: number) => void;
@@ -53,6 +55,8 @@ export default function TopToolbar({
   values,
   onBack,
   onImport,
+  onEditVariables,
+  onPreview,
   templateId,
   zoom,
   onZoomChange,
@@ -304,6 +308,18 @@ export default function TopToolbar({
               onClick={() => setSendDialogVisible(true)}
             />
           </Tooltip>
+
+          {onEditVariables && (
+            <Tooltip content="Edit dynamic variables">
+              <Button
+                className="pro-toolbar-btn-accent"
+                onClick={onEditVariables}
+                style={{ fontSize: 13 }}
+              >
+                {"{ }"} Variables
+              </Button>
+            </Tooltip>
+          )}
 
           <Dropdown
             droplist={

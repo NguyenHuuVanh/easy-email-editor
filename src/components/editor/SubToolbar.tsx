@@ -10,18 +10,25 @@ import {
   IconRedo,
   IconEmail,
 } from "@arco-design/web-react/icon";
-import { useBlock, useActiveTab, useFocusIdx, ActiveTabKeys, IEmailTemplate } from "easy-email-editor";
+import {
+  useBlock,
+  useActiveTab,
+  useFocusIdx,
+  ActiveTabKeys,
+  IEmailTemplate,
+} from "easy-email-editor";
 import { BasicType, BlockManager, JsonToMjml } from "easy-email-core";
 import mjml from "mjml-browser";
 
 interface SubToolbarProps {
   values: IEmailTemplate;
+  onPreview?: () => void;
 }
 
 // Gmail clips emails larger than 102KB
 const GMAIL_CLIP_SIZE = 102 * 1024;
 
-export default function SubToolbar({ values }: SubToolbarProps) {
+export default function SubToolbar({ values, onPreview }: SubToolbarProps) {
   const { undo, redo, undoable, redoable, removeBlock } = useBlock();
   const { activeTab, setActiveTab } = useActiveTab();
   const { focusIdx, setFocusIdx } = useFocusIdx();
@@ -139,14 +146,22 @@ export default function SubToolbar({ values }: SubToolbarProps) {
           <div className="h-1.5 w-24 overflow-hidden rounded-full bg-gray-200">
             <div
               className={`h-full rounded-full transition-all duration-300 ${
-                isOverLimit ? "bg-red-500" : isNearLimit ? "bg-yellow-500" : "bg-green-500"
+                isOverLimit
+                  ? "bg-red-500"
+                  : isNearLimit
+                    ? "bg-yellow-500"
+                    : "bg-green-500"
               }`}
               style={{ width: `${sizePercent}%` }}
             />
           </div>
           <span
             className={`whitespace-nowrap tabular-nums ${
-              isOverLimit ? "font-semibold text-red-500" : isNearLimit ? "text-yellow-500" : "text-gray-500"
+              isOverLimit
+                ? "font-semibold text-red-500"
+                : isNearLimit
+                  ? "text-yellow-500"
+                  : "text-gray-500"
             }`}
           >
             {sizeKB} KB / 102 KB
@@ -169,6 +184,7 @@ export default function SubToolbar({ values }: SubToolbarProps) {
             <button
               className="flex items-center justify-center rounded px-5 py-[6px] border border-black text-black transition-all duration-150 cursor-pointer hover:bg-gray-100 hover:text-gray-700 
               "
+              onClick={onPreview}
             >
               <IconEye className="w-4 h-4" />
             </button>

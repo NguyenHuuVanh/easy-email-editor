@@ -28,6 +28,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import TopToolbar from "./editor/TopToolbar";
 import SubToolbar from "./editor/SubToolbar";
 import ImportDialog from "./editor/ImportDialog";
+import DynamicDataDialog from "./editor/DynamicDataDialog";
+import PreviewDialog from "./editor/PreviewDialog";
 import MergeTagPicker from "./editor/MergeTagPicker";
 import { LayersTab, SettingsTab, SavedBlocksTab } from "./editor/SidebarPanels";
 import {
@@ -38,7 +40,11 @@ import {
 } from "./editor/CustomBlocks";
 
 // Data
-import { mergeTags, mergeTagGenerate } from "@/data/merge-tags";
+import {
+  mergeTags,
+  mergeTagGenerate,
+  defaultMergeTagsData,
+} from "@/data/merge-tags";
 import { uploadImage, saveTemplate } from "@/services/image-upload";
 
 // Register custom blocks on module load
@@ -56,6 +62,10 @@ export default function Editor() {
   const [template, setTemplate] = useState<IEmailTemplate | null>(null);
   const [loading, setLoading] = useState(false);
   const [importVisible, setImportVisible] = useState(false);
+  const [dynamicDataVisible, setDynamicDataVisible] = useState(false);
+  const [previewVisible, setPreviewVisible] = useState(false);
+  const [mergeTagsData, setMergeTagsData] = useState(defaultMergeTagsData);
+  const [mergeTagsVersion, setMergeTagsVersion] = useState(0);
   const [zoom, setZoom] = useState(100);
   const autosaveTimer = useRef<NodeJS.Timeout | null>(null);
 
@@ -127,6 +137,71 @@ export default function Editor() {
         clearInterval(autosaveTimer.current);
       }
     };
+  }, []);
+
+  // Inject styles into Shadow DOM for Page styling (padding-top: 0, purple border)
+  useEffect(() => {
+    const STYLE_ID = "pro-shadow-style";
+
+    const applyStyles = () => {
+      const visualEditor = document.getElementById("VisualEditorEditMode");
+      if (!visualEditor) return false;
+      const shadowRoot = visualEditor.shadowRoot;
+      if (!shadowRoot) return false;
+
+      // Inject <style> into shadow root
+      if (!shadowRoot.getElementById(STYLE_ID)) {
+        const style = document.createElement("style");
+        style.id = STYLE_ID;
+        style.textContent = `
+          .shadow-container.easy-email-sync-scroll {
+            padding: 0px !important;
+            margin-top: 0px !important;
+            background-color: #dddfe5 !important;
+          }
+          .shadow-container.easy-email-sync-scroll > div {
+            border: 2px solid #7c3aed !important;
+            position: relative;
+          }
+        `;
+        shadowRoot.appendChild(style);
+      }
+
+      // Also directly override inline styles on the container
+      const container = shadowRoot.querySelector(
+        ".shadow-container.easy-email-sync-scroll",
+      ) as HTMLElement;
+      if (container) {
+        container.style.setProperty("padding-top", "0px", "important");
+        container.style.setProperty("margin-top", "0px", "important");
+        return true;
+      }
+      return false;
+    };
+
+    // Observe until shadow DOM + container are ready
+    let done = applyStyles();
+    if (!done) {
+      const observer = new MutationObserver(() => {
+        if (applyStyles()) {
+          observer.disconnect();
+        }
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+
+      // Also poll briefly since shadow DOM mutations may not bubble
+      const interval = setInterval(() => {
+        if (applyStyles()) {
+          clearInterval(interval);
+          observer.disconnect();
+        }
+      }, 300);
+
+      return () => {
+        observer.disconnect();
+        clearInterval(interval);
+      };
+    }
   }, []);
 
   const initialValues: IEmailTemplate | null = useMemo(() => {
@@ -264,13 +339,14 @@ export default function Editor() {
     <ConfigProvider locale={enUS}>
       <div className="pro-editor-container">
         <EmailEditorProvider
+          key={`editor-${mergeTagsVersion}`}
           height={"calc(100vh - 52px)"}
           data={initialValues}
           onUploadImage={onUploadImage}
           onSubmit={onSubmit}
           dashed={false}
           enabledLogic
-          mergeTags={mergeTags}
+          mergeTags={mergeTagsData}
           mergeTagGenerate={mergeTagGenerate}
           enabledMergeTagsBadge
           renderMergeTagContent={(props) => (
@@ -335,6 +411,8 @@ export default function Editor() {
                   values={values}
                   onBack={() => router.push("/")}
                   onImport={() => setImportVisible(true)}
+                  onEditVariables={() => setDynamicDataVisible(true)}
+                  onPreview={() => setPreviewVisible(true)}
                   templateId={id}
                   zoom={zoom}
                   onZoomChange={setZoom}
@@ -358,7 +436,10 @@ export default function Editor() {
                     showSourceCode={true}
                     compact={false}
                   >
-                    <SubToolbar values={values} />
+                    <SubToolbar
+                      values={values}
+                      onPreview={() => setPreviewVisible(true)}
+                    />
                     <EmailEditor />
                   </StandardLayout>
                 </div>
@@ -367,6 +448,30 @@ export default function Editor() {
                 <ImportDialog
                   visible={importVisible}
                   onClose={() => setImportVisible(false)}
+                />
+
+                {/* Dynamic Data Dialog */}
+                <DynamicDataDialog
+                  visible={dynamicDataVisible}
+                  onClose={() => setDynamicDataVisible(false)}
+                  data={mergeTagsData}
+                  onChange={(newData) => {
+                    // Save current editor state before re-mount
+                    setTemplate(values);
+                    setMergeTagsData(newData);
+                    setMergeTagsVersion((v) => v + 1);
+                  }}
+                />
+
+                {/* Preview Dialog */}
+                <PreviewDialog
+                  visible={previewVisible}
+                  onClose={() => setPreviewVisible(false)}
+                  values={values}
+                  mergeTagsData={mergeTagsData}
+                  onMergeTagsDataChange={(newData) => {
+                    setMergeTagsData(newData);
+                  }}
                 />
               </>
             );
