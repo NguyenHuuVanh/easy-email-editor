@@ -1,11 +1,21 @@
-import path from 'path';
+import path from "path";
 const nextConfig = {
+  // Disable React strict mode to avoid hydration warnings from legacy libraries
+  reactStrictMode: false,
+
+  // Turbopack configuration for Next.js 16
+  turbopack: {
+    resolveAlias: {
+      react: "./node_modules/react",
+      "react-dom": "./node_modules/react-dom",
+    },
+  },
+  // Webpack configuration (fallback)
   webpack: (config, { isServer }) => {
-    // 强制所有模块使用同一个 React 实例
     config.resolve.alias = {
       ...config.resolve.alias,
-      react: path.resolve('./node_modules/react'),
-      'react-dom': path.resolve('./node_modules/react-dom'),
+      react: path.resolve("./node_modules/react"),
+      "react-dom": path.resolve("./node_modules/react-dom"),
     };
     return config;
   },

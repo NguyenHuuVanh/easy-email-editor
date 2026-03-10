@@ -1,3 +1,6 @@
+// React 19 compatibility polyfill - must be first
+import "../polyfills/react-dom";
+
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "./globals.css";
